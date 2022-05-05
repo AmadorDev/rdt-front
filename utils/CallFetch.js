@@ -1,5 +1,3 @@
-
-
 export async function callFetch(url, params,token='') {
   const paramsTemp = {
     ...params,
