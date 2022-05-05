@@ -1,0 +1,418 @@
+{
+    "register": [
+        {
+            "locale": "en-US",
+            "title": "Sign up here",
+            "subtitle": "we want to meet you",
+            "policy": "Review our privacy policies.",
+            "btn": "REGISTER"
+        },
+        {
+            "locale": "es-ES",
+            "title": "Registrate aquí",
+            "subtitle": "Queremos conocerte",
+            "policy": "Revisa nuestras políticas de privacidad.",
+            "btn": "Registrarme"
+        }
+    ],
+    "info": [
+        {
+            "locale": "en-US",
+            "address": "x",
+            "email": "radiant@radiant.com",
+            "contact": "x",
+            "address_text": "Address",
+            "email_text": "Email",
+            "contact_text": "Contact"
+        },
+        {
+            "locale": "es-ES",
+            "address": "x",
+            "email": "radiant@radiant.com",
+            "contact": "x",
+            "address_text": "Direccion",
+            "email_text": "Correo",
+            "contact_text": "Contacto"
+        }
+    ],
+    "menu_footer": [
+        
+        {
+            "locale": "en-US",
+            "title": "Questions",
+            "url": "questions"
+        },
+        {
+            "locale": "es-ES",
+            "title": "Preguntas frecuentes",
+            "url": "questions"
+        },
+        {
+            "locale": "en-US",
+            "title": "Usage policy",
+            "url": "usage-policy"
+        },
+        {
+            "locale": "es-ES",
+            "title": "Politica de uso",
+            "url": "usage-policy"
+        },
+        {
+            "locale": "en-US",
+            "title": "Contact Us",
+            "url": "contact-us"
+        },
+        {
+            "locale": "es-ES",
+            "title": "contactenos",
+            "url": "contact-us"
+        }
+    ],
+    "lines": [
+        {
+            "locale": "en-US",
+            "line": "lines",
+            "event": "events",
+            "video": "videos",
+            "more": "see more",
+            "prod_title": "Products of Line",
+            "prod_desc": "This is the first blog post in English published on the blog",
+            "watch": "watch Video",
+            "yt": "watch on youtube"
+        },
+        {
+            "locale": "es-ES",
+            "line": "Lineas",
+            "event": "Eventos",
+            "video": "Videos",
+            "more": "ver más",
+            "prod_title": "Productos en líneas",
+            "prod_desc": "descripción del producto",
+            "watch": "Ver Video",
+            "yt": "VER EN  youtube"
+        }
+    ],
+    "text_home": {
+        "line": [
+            {
+                "locale": "en-US",
+                "line_featured": "Featured Lines",
+                "shortname": "Discover Our Products designed for you",
+                "btn": "see more"
+            },
+            {
+                "locale": "es-ES",
+                "line_featured": "Líneas Destacadas",
+                "shortname": "Descubre Nuestros Productos diseñados para ti",
+                "btn": "ver más"
+            }
+        ],
+        "galery": [
+            {
+                "locale": "en-US",
+                "galery": "Gallery",
+                "shortname": "Meet our finishes, with the highest technology for your hair"
+            },
+            {
+                "locale": "es-ES",
+                "galery": "Galería",
+                "shortname": "Conoce nuestros acabados, con la más alta tecnología para tu cabello"
+            }
+        ],
+        "test": [
+            {
+                "locale": "en-US",
+                "title_one": "Discover",
+                "title_two": "what your hair",
+                "title": " needs to",
+                "content": "Carry out our capillary diagnosis to find the perfect combination of our products as that your hair needs.",
+                "btn": "START TEST"
+            },
+            {
+                "locale": "es-ES",
+                "title_one": "Descubre",
+                "title_two": "lo que tu cabello",
+                "title": "  necesita",
+                "content": "Realiza nuestro diagnóstico capilar para encontrar la combinación perfecta de nuestros productos según lo que tu cabello necesita",
+                "btn": "enpezar el test"
+            }
+        ],
+        "left": [
+            {
+                "locale": "en-US",
+                "title": "Find your Radiant Lounge",
+                "content": "Find your Radiant salon to discover the radiant experience and the perfect products we have for you.",
+                "btn": "search "
+            },
+            {
+                "locale": "es-ES",
+                "title": "Encuentra tu Salón Radiant",
+                "content": "Encuentra tu salón Radiant para descubrir la experiencia radiant y los productos perfectos que tenemos para ti.",
+                "btn": "Buscar"
+            }
+        ],
+        "right": [
+            {
+                "locale": "en-US",
+                "title": "I want to sell Radiant",
+                "content": "Be part of the RADIANT PROFESSIONAL family, discover the exclusive benefits for our RADIANT PARTNERS and GROW with us.",
+                "btn": "start test "
+            },
+            {
+                "locale": "es-ES",
+                "title": "Deseo vender Radiant",
+                "content": "Forma parte de la familia RADIANT PROFESSIONAL, descubre los beneficios exclusivos para nuestros SOCIOS RADIANT y CRECE junto a nosotros.",
+                "btn": "enpezar test"
+            }
+        ]
+    },
+    "capilar_locale": {
+        "result": [
+            {
+                "locale": "en-US",
+                "title": "Hair Test: Result"
+            },
+            {
+                "locale": "es-ES",
+                "title": "Test capilar: Resultado"
+            }
+        ],
+        "index": [
+            {
+                "locale": "en-US",
+                "title": "Capillary test",
+                "shortname": "“Discover Our Products designed for you”",
+                "content_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque porro quisquam est.",
+                "content_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "btn": "start"
+            },
+            {
+                "locale": "es-ES",
+                "title": "Test capilar",
+                "shortname": "“Descubre Nuestros Productos diseñados para ti”",
+                "content_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque porro quisquam est.",
+                "content_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                "btn": "comenzar"
+            }
+        ],
+        "questions": {
+            "question_one": [
+                {
+                    "locale": "en-US",
+                    "title": "Question 1",
+                    "question": "What type of hair do you have?",
+                    "options": [
+                        "smooth",
+                        "Curly",
+                        "Curly",
+                        "I do not know"
+                    ]
+                },
+                {
+                    "locale": "es-ES",
+                    "title": "PREGUNTA 1",
+                    "question": "¿Qué tipo de cabello tienes?",
+                    "options": [
+                        "Liso",
+                        "Ondulado",
+                        "Rizado",
+                        "No lo sé"
+                    ]
+                }
+            ],
+            "question_two": [
+                {
+                    "locale": "en-US",
+                    "title": "Question 2",
+                    "question": "What is the last chemical process carried out?",
+                    "options": [
+                        "dyed without bleaching",
+                        "Dyed with Bleached",
+                        "smoothing",
+                        "Straightened with Dyed",
+                        "Neither"
+                    ]
+                },
+                {
+                    "locale": "es-ES",
+                    "title": "PREGUNTA 2",
+                    "question": "¿Cúal es el último proceso quimico realizado?",
+                    "options": [
+                        "Teñido sin Decolorar",
+                        "Teñido con Decolorado",
+                        "Alisado",
+                        "Alisado con Teñido",
+                        "Ninguno"
+                    ]
+                }
+            ],
+            "question_three": [
+                {
+                    "locale": "en-US",
+                    "title": "Question 3",
+                    "question": "What type of scalp do you have?",
+                    "options": [
+                        "Fatty",
+                        "Dried",
+                        "Mixed"
+                    ]
+                },
+                {
+                    "locale": "es-ES",
+                    "title": "PREGUNTA 3",
+                    "question": "¿Qué tipo de cuero cabelludo tienes?",
+                    "options": [
+                        "Graso",
+                        "Seco",
+                        "Mixto"
+                    ]
+                }
+            ],
+            "question_four": [
+                {
+                    "locale": "en-US",
+                    "title": "Question 4",
+                    "question": "How do you do your hair regularly?",
+                    "options": [
+                        "I tie it",
+                        "I iron it",
+                        "I curl it",
+                        "dryer use",
+                        "Dryer and iron",
+                        "I don't fix it"
+                    ]
+                },
+                {
+                    "locale": "es-ES",
+                    "title": "PREGUNTA 4",
+                    "question": "¿Cómo arreglas tu cabello regularmente?",
+                    "options": [
+                        "Lo amarro",
+                        "Lo plancho",
+                        "Lo rizo",
+                        "Uso secadora",
+                        "Secadora y plancha",
+                        "No lo arreglo"
+                    ]
+                }
+            ],
+            "question_five": [
+                {
+                    "locale": "en-US",
+                    "title": "Question 5",
+                    "question": "What is the main need of your hair?",
+                    "options": [
+                        "Hydration / Restructuring",
+                        "shine and smoothness",
+                        "Repair / Nutrition",
+                        "Smoothing Maintenance",
+                        "Neutralize blondes and eliminate frizz",
+                        "Hair rejuvenation"
+                    ]
+                },
+                {
+                    "locale": "es-ES",
+                    "title": "PREGUNTA 5",
+                    "question": "¿Cuál es la principal necesidad de tu cabello?",
+                    "options": [
+                        "Hidratación / Reestructuracion",
+                        "Brillo y suavidad",
+                        "Reparación / Nutrición",
+                        "Mantenimiento de alisado",
+                        "Neutralizar rubios y eliminar frizz",
+                        "Rejuvenecimiento capilar"
+                    ]
+                }
+            ]
+        }
+    },
+    "global_locale": [
+        {
+            "locale": "en-US",
+            "home": "Home",
+            "next": "next",
+            "prev": "previous",
+            "capillaries": "capillary test",
+            "product":"Products",
+            "event":"Events",
+            "testing":"Testings",
+            "more":"see more",
+            "news":"News"
+        },
+        {
+            "locale": "es-ES",
+            "home": "Inicio",
+            "next": "siguiente",
+            "prev": "anterior",
+            "capillaries": "test capilar",
+            "product":"Productos",
+            "event":"Eventos",
+            "testing":"Pruebas",
+            "more":"ver más",
+            "news":"Novedades"
+        }
+    ],
+    "capilar_result": [
+        {
+            "locale": "en-US",
+            "title": "capillary test",
+            "result":"result",
+            "shortname": "“Discover Our Products designed for you”",
+            "view_product": "see products",
+            "view_salon": "see salon",
+            "view_shop": "see shop",
+            "find":"find"
+           
+        },
+        {
+            "locale": "es-ES",
+            "title": "Test capillar",
+            "result":"resultado",
+            "shortname": "“Descubre Nuestros Productos diseñados para ti”",
+            "view_product": "ver productos",
+            "view_salon": "ver salones",
+            "view_shop": "ver tienda",
+            "find":"Encuentra"
+            
+        }
+    ],
+    "news_event": [
+        {
+            "locale": "en-US",
+            "title": "Events",
+            "more":"see more", 
+            "news":"news"
+        },
+        {
+            "locale": "es-ES",
+            "title": "Eventos",
+            "more":"ver más",
+            "news":"Novedades"
+        }
+    ],
+    "news_galleries": [
+        {
+            "locale": "en-US",
+            "title": "Galleries",
+            "more":"see more" 
+        },
+        {
+            "locale": "es-ES",
+            "title": "Galerias",
+            "more":"ver más"
+        }
+    ],
+    "news_testing": [
+        {
+            "locale": "en-US",
+            "title": "test images",
+            "more":"see more" 
+        },
+        {
+            "locale": "es-ES",
+            "title": "imagenes de pruebas",
+            "more":"ver más"
+        }
+    ]
+    
+}

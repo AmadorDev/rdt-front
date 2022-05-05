@@ -1,0 +1,94 @@
+.bg-register {
+    background: $t-os !important;
+    
+}
+
+.register-per {
+    background: $t-os !important;
+    color: $c-white;
+
+}
+
+.r-title {
+    font-family: "Arkitech";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    // line-height: 56px;
+    color: #F5F5F5;
+}
+
+.r-subtitle {
+
+font-family: "Gotham";
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+// line-height: 24px;
+color: #F5F5F5;
+letter-spacing: 0.18px;
+
+
+}
+
+.input-register {
+    // width: 60% !important;
+    height: 45px;
+}
+
+.btn-g-regiter {
+    font-weight: 500;
+    
+}
+
+.t-register {
+    color: $c-white;
+}
+
+// .chk_per{
+//     width: 20px;
+//     height: 20px;
+//     background:  $t-os !important ;
+
+
+// }
+
+label input {
+    display: none;
+   
+}
+
+
+label span {
+    width: 18px;
+    height: 18px;
+    border: 2px solid $c-white;
+    display: inline-block;
+    position: relative;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+
+[type=checkbox]:checked+span:before {
+    content: '\2714';
+    position: absolute;
+    color: $c-white  !important;
+    top: -5px;
+    left: -2px;
+    
+}
+input:focus{
+    outline: none !important;
+    border-color: $c-g !important;
+    box-shadow: 0 0 2px $c-g !important;
+}
+
+@media (max-width: 600px) {
+    .r-title {
+        font-size: 20px;
+    }
+    .r-subtitle{
+        font-size: 16px;
+    }
+  }
