@@ -2,11 +2,7 @@ import React from "react";
 
 export default function ItemCategory({ title, onClick }) {
   return (
-    <li
-      className="nav-item "
-      role="presentation"
-      onClick={onClick}
-    >
+    <li className="nav-item " role="presentation" onClick={onClick}>
       <a
         className={`
 nav-link

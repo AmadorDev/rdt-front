@@ -80,7 +80,7 @@ function index() {
       <Banner></Banner>
 
       <Breakcrums>
-        <ItemBreack title={`${line_st?.line}`} ruta="/lineas"></ItemBreack>
+        <ItemBreack title={`${line_st?.line}`} ruta="/"></ItemBreack>
         <ItemBreack title={`${linea?.data.name}`}></ItemBreack>
       </Breakcrums>
       {/* ***************************** LINE******************* */}

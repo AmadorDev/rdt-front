@@ -74,7 +74,7 @@ export default function Product({ product, query, locale }) {
   return (
     <>
       <Breakcrums>
-        <ItemBreack title={line_st?.line} ruta="/lineas"></ItemBreack>
+        <ItemBreack title={line_st?.line} ruta="/"></ItemBreack>
         <ItemBreack
           title={product?.line}
           ruta={`/lineas/${query?.line}`}

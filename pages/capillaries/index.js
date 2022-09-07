@@ -13,10 +13,13 @@ import Container from "../../components/layouts/Container";
 import staticTrans from "../../staticTranslations.json";
 import Banner from "../../components/layouts/Banner";
 import ItemBreack from "../../components/layouts/ItemBreack";
+
+
+
 export default function index() {
   const { locale } = useRouter();
-  const { capilar_locale } = staticTrans;
-  const info = capilar_locale?.index.filter(
+  const { page_capillaries } = staticTrans;
+  const info = page_capillaries?.filter(
     (item) => item.locale === locale
   )[0];
   const info_break = staticTrans?.global_locale.filter(
@@ -29,10 +32,11 @@ export default function index() {
       <Breakcrums>
         <ItemBreack title={info_break?.home} ruta="/"></ItemBreack>
       </Breakcrums>
+
       <Divider></Divider>
       <TitleAndSubtitle
-        title={`${info?.title}`}
-        subtitle={`${info?.shortname}`}
+        title={`${info?.page_title}`}
+        subtitle=""
       ></TitleAndSubtitle>
       <DividerDos></DividerDos>
 
@@ -48,9 +52,11 @@ export default function index() {
           </div>
           <div className="item md:w-1/2 ">
             <div className="text-left">
-              <h1 className="g_title">{info?.content_title}</h1>
+              <h1 className="g_title">{info?.title}</h1>
 
-              <p className="g_desc mt-4">{info?.content_desc}</p>
+              <h5 className="g_desc mt-4">{info?.subtitle}</h5>
+              <h5 className="g_desc mt-1">{info?.subtitle_two}</h5>
+              <h5 className="g_desc mt-1">{info?.subtitle_tree}</h5>
 
               <Button className="mt-3 ">
                 <Link href="/capillaries/start">{info?.btn}</Link>

@@ -55,7 +55,7 @@ export default function ModalAnimate({
         {/* modal */}
         <div
           ref={modal}
-          className="pacity-0 transform  -translate-y-full scale-150  relative w-full md:w-3/4 h-auto bg-white rounded shadow-lg transition-opacity transition-transform duration-300"
+          className="pacity-0 p-0 m-0 transform  -translate-y-full scale-150  relative w-4/5 md:w-1/4 h-auto bg-white rounded shadow-lg transition-opacity transition-transform duration-300"
         >
           {/* button close */}
           <button
@@ -65,11 +65,11 @@ export default function ModalAnimate({
             ✗
           </button>
           {/* header */}
-          <div className="px-4 py-3 ">
+          <div className="px-4 md:py-3 ">
             <h2 className="text-xl font-semibold text-gray-600">{title}</h2>
           </div>
           {/* body */}
-          <div className="p-0">{children}</div>
+          <div className="p-0 m-0">{children}</div>
         </div>
       </div>
     </>

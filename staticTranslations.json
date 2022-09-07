@@ -36,7 +36,6 @@
         }
     ],
     "menu_footer": [
-        
         {
             "locale": "en-US",
             "title": "Questions",
@@ -333,11 +332,11 @@
             "next": "next",
             "prev": "previous",
             "capillaries": "capillary test",
-            "product":"Products",
-            "event":"Events",
-            "testing":"Testings",
-            "more":"see more",
-            "news":"News"
+            "product": "Products",
+            "event": "Events",
+            "testing": "Testings",
+            "more": "see more",
+            "news": "News"
         },
         {
             "locale": "es-ES",
@@ -345,74 +344,91 @@
             "next": "siguiente",
             "prev": "anterior",
             "capillaries": "test capilar",
-            "product":"Productos",
-            "event":"Eventos",
-            "testing":"Pruebas",
-            "more":"ver más",
-            "news":"Novedades"
+            "product": "Productos",
+            "event": "Eventos",
+            "testing": "Pruebas",
+            "more": "ver más",
+            "news": "Novedades"
         }
     ],
     "capilar_result": [
         {
             "locale": "en-US",
             "title": "capillary test",
-            "result":"result",
+            "result": "result",
             "shortname": "“Discover Our Products designed for you”",
             "view_product": "see products",
             "view_salon": "see salon",
             "view_shop": "see shop",
-            "find":"find"
-           
+            "find": "find"
         },
         {
             "locale": "es-ES",
             "title": "Test capillar",
-            "result":"resultado",
+            "result": "resultado",
             "shortname": "“Descubre Nuestros Productos diseñados para ti”",
             "view_product": "ver productos",
             "view_salon": "ver salones",
             "view_shop": "ver tienda",
-            "find":"Encuentra"
-            
+            "find": "Encuentra"
         }
     ],
     "news_event": [
         {
             "locale": "en-US",
             "title": "Events",
-            "more":"see more", 
-            "news":"news"
+            "more": "see more",
+            "news": "news"
         },
         {
             "locale": "es-ES",
             "title": "Eventos",
-            "more":"ver más",
-            "news":"Novedades"
+            "more": "ver más",
+            "news": "Novedades"
         }
     ],
     "news_galleries": [
         {
             "locale": "en-US",
             "title": "Galleries",
-            "more":"see more" 
+            "more": "see more"
         },
         {
             "locale": "es-ES",
             "title": "Galerias",
-            "more":"ver más"
+            "more": "ver más"
         }
     ],
     "news_testing": [
         {
             "locale": "en-US",
             "title": "test images",
-            "more":"see more" 
+            "more": "see more"
         },
         {
             "locale": "es-ES",
             "title": "imagenes de pruebas",
-            "more":"ver más"
+            "more": "ver más"
+        }
+    ],
+    "page_capillaries": [
+        {
+            "page_title": "Capillary test",
+            "locale": "en-US",
+            "title": "Do you want to repair your hair, but don't know what it needs?",
+            "subtitle": "Try our online hair diagnosis and leave your hair in the hands of beauty professionals.",
+            "subtitle_two":"We have 6 specialized post-maintenance lines, formulated with high technology and geared towards each type of hair according to its needs.",
+            "subtitle_tree":"DARE TO A CHANGE AND BRING OUT YOUR BEST VERSION!",
+            "btn": "START"
+        },
+        {
+            "locale": "es-ES",
+            "page_title": "Test capilar",
+            "title": "¿Deseas reparar tu cabello, pero no sabes qué necesita?",
+            "subtitle": "Prueba nuestro diagnóstico capilar en línea y deja tu cabello en las manos de los profesionales de la belleza.",
+            "subtitle_two":"Contamos con 6 líneas especializadas de post mantenimiento, formuladas con alta tecnología y orientadas a cada tipo de cabello según su necesidad.",
+            "subtitle_tree":"¡ATRÉVETE A UN CAMBIO Y SACA TU MEJOR VERSIÓN!",
+            "btn": "EMPEZAR"
         }
     ]
-    
 }
