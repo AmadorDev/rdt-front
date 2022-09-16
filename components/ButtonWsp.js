@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ButtonWsp() {
   return (
-    <Link href="https://wa.me/51941840858?text=Hola como estas">
+    <Link href="https://wa.me/51941840858?text=¡Hola! Deseo mas información sobre la gama de productos de Radiant ">
       <a className="whatsapp" target="_blank">
         <i className="fa fa-whatsapp  whatsapp-icon"></i>
       </a>

@@ -33,7 +33,7 @@ export default function TestInfo({text}) {
           </div>
           <div className="item md:w-1/2  flex justify-end">
             {/* <img src="/dev/flaca.png" className="flex self-end "></img> */}
-            <Image src="/dev/flaca.png" className="flex self-end" width={421} height={379}></Image>
+            <Image src="/images/model.png" className="flex self-end" width={421} height={379}></Image>
           </div>
         </div>
       </div>

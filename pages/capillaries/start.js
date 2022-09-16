@@ -404,11 +404,11 @@ function ItemOptions({ title, classCirle = "", onClick }) {
       </div>
       <div className="item  w-1/2 md:w-full m-0 ">
         <span className="option_title">{title}</span>
-        <div className="flex">
+        {/* <div className="flex">
           <div className="option_cuadros option_cuadros_md mr-2"></div>
           <div className="option_cuadros option_cuadros_lg mx-2"></div>
           <div className="option_cuadros option_cuadros_sm mx-2"></div>
-        </div>
+        </div> */}
       </div>
       <div className="flex item  w-1/7 md:w-4/4 m-0 justify-center ">
         <div
