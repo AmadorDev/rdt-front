@@ -21,7 +21,7 @@ export default function HoverCate() {
   const [treeProducts, setTreeProducts] = useState(null);
   const [treeEvents, setTreeEvents] = useState(null);
   const [treeVideos, setTreeVideos] = useState(null);
-console.log(treeEvents)
+  console.log(treeEvents);
   function getLines(e, line) {
     setLines(line);
     setTreeProducts(null);
@@ -112,7 +112,9 @@ console.log(treeEvents)
               {" "}
               <p className="tree-text uppercase">{info?.type_c}</p>
               <p className="">
-                {treeEvents?.length > 0   ? treeEvents[0].event:''}
+                {/* {treeEvents?.length > 0   ? treeEvents[0].event:''} */}
+                Encuentra las lineas especializadas para cada tipo de cabello:
+                Liso, ondulado, risado, seco, tinturado y malatratado.
               </p>
             </>
           ) : null}

@@ -14,6 +14,7 @@ export default function index() {
     <Container>
       <Banner></Banner>
       <LinesDest text={text_home?.line}></LinesDest>
+      <div className="mt-5"></div>
       {/* <Galery text={text_home?.galery}></Galery> */}
       <Videos></Videos>
       <TestInfo text={text_home?.test}></TestInfo>
