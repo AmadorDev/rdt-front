@@ -6,6 +6,7 @@ export default function ModalAnimate({
   setShow,
   title = "",
   setYyLink,
+  className = "w-4/5 md:w-1/4",
 }) {
   const modal_overlay = useRef(null);
   const modal = useRef(null);
@@ -45,30 +46,23 @@ export default function ModalAnimate({
 
   return (
     <>
-      
       {/* overlay */}
       <div
         style={{ zIndex: 9999999 }}
         ref={modal_overlay}
         className="hidden fixed  inset-0 bg-black bg-opacity-70 h-screen w-full flex justify-center items-center "
       >
-        {/* modal */}
+        <button
+          onClick={() => setShow(false)}
+          className="absolute top-2 right-2  text-2xl w-10 h-10 rounded-full focus:outline-none  btnclose_modal"
+        >
+          ✗
+        </button>
+
         <div
           ref={modal}
-          className="pacity-0 p-0 m-0 transform  -translate-y-full scale-150  relative w-4/5 md:w-1/4 h-auto bg-white rounded shadow-lg transition-opacity transition-transform duration-300"
+          className={`pacity-0 p-0 m-0 transform  -translate-y-full scale-150  relative ${className}  h-auto bg-transparent rounded shadow-lg transition-opacity transition-transform duration-300`}
         >
-          {/* button close */}
-          <button
-            onClick={() => setShow(false)}
-            className="absolute -top-3 -right-3  text-2xl w-10 h-10 rounded-full focus:outline-none  btnclose_modal"
-          >
-            ✗
-          </button>
-          {/* header */}
-          <div className="px-4 md:py-3 ">
-            <h2 className="text-xl font-semibold text-gray-600">{title}</h2>
-          </div>
-          {/* body */}
           <div className="p-0 m-0">{children}</div>
         </div>
       </div>

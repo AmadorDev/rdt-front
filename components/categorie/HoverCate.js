@@ -5,11 +5,13 @@ import menuContext from "../../contexts/menu/menuContext";
 import ItemCategory from "./ItemCategory";
 import { getTree } from "../../api/menuApi";
 import LinkUrl from "./LinkUrl";
-import static_text from "../../staticTranslations.json"
+import static_text from "../../staticTranslations.json";
 export default function HoverCate() {
   const { defaultMenu } = useContext(menuContext);
   const { locale } = useRouter();
-  const info = static_text?.global_locale.filter((item =>item.locale === locale))[0];
+  const info = static_text?.global_locale.filter(
+    (item) => item.locale === locale
+  )[0];
 
   const cates = defaultMenu.filter(
     (item) => item.code === "cate" && item.locale === locale
@@ -19,7 +21,7 @@ export default function HoverCate() {
   const [treeProducts, setTreeProducts] = useState(null);
   const [treeEvents, setTreeEvents] = useState(null);
   const [treeVideos, setTreeVideos] = useState(null);
-
+console.log(treeEvents)
   function getLines(e, line) {
     setLines(line);
     setTreeProducts(null);
@@ -27,7 +29,6 @@ export default function HoverCate() {
     setTreeVideos(null);
     let navs = document.querySelectorAll(".nav-item-cate-li");
     navs.forEach((element) => {
-      
       if (element != e) {
         element.classList.remove("active");
       }
@@ -43,7 +44,7 @@ export default function HoverCate() {
       if (resp?.status === "OK") {
         setTreeProducts(resp?.products);
         setTreeEvents(resp?.events);
-        setTreeVideos(resp?.videos);
+        // setTreeVideos(resp?.videos);
       } else {
         setTreeProducts(null);
       }
@@ -107,23 +108,14 @@ export default function HoverCate() {
         </div>
         <div className="flex-1">
           {treeProducts?.length > 0 ? (
-            <p className="tree-text">{info?.testing}</p>
+            <>
+              {" "}
+              <p className="tree-text uppercase">{info?.type_c}</p>
+              <p className="">
+                {treeEvents?.length > 0   ? treeEvents[0].event:''}
+              </p>
+            </>
           ) : null}
-          {treeVideos?.map((pro, index) => (
-            <LinkUrl key={index} url={`/lineas/${lineNow}?scroll=true`}>
-              {pro?.title}
-            </LinkUrl>
-          ))}
-        </div>
-        <div className="flex-1">
-          {treeProducts?.length > 0 ? (
-            <p className="tree-text">{info?.event}</p>
-          ) : null}
-          {treeEvents?.map((eve, index) => (
-            <LinkUrl key={index} url={`/lines-events/${eve?.slug}?line=${lineNow}`}>
-               {eve?.event}
-            </LinkUrl>
-          ))}
         </div>
       </div>
     </div>

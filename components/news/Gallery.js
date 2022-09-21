@@ -93,7 +93,7 @@ function Gallery() {
             setShow={setShowModal}
             setYyLink={() => console.log()}
           >
-            <div className="my-5 flex justify-center items-center">
+            <div className="flex justify-center items-center">
               {isimage ? (
                 <Image src={isimage} width={412} height={748}></Image>
               ) : null}

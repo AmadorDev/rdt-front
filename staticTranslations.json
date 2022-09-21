@@ -155,13 +155,13 @@
                 "locale": "en-US",
                 "title": "I want to sell Radiant",
                 "content": "Be part of the RADIANT PROFESSIONAL family, discover the exclusive benefits for our RADIANT PARTNERS and GROW with us.",
-                "btn": "start test "
+                "btn": "SIGN UP"
             },
             {
                 "locale": "es-ES",
                 "title": "Deseo vender Radiant",
                 "content": "Forma parte de la familia RADIANT PROFESSIONAL, descubre los beneficios exclusivos para nuestros SOCIOS RADIANT y CRECE junto a nosotros.",
-                "btn": "empezar test"
+                "btn": "REGISTRATE"
             }
         ]
     },
@@ -336,7 +336,8 @@
             "event": "Events",
             "testing": "Testings",
             "more": "see more",
-            "news": "News"
+            "news": "News",
+            "type_c":"hair type"
         },
         {
             "locale": "es-ES",
@@ -348,7 +349,8 @@
             "event": "Eventos",
             "testing": "Pruebas",
             "more": "ver más",
-            "news": "Novedades"
+            "news": "Novedades",
+            "type_c":"Tipo de cabello"
         }
     ],
     "capilar_result": [
