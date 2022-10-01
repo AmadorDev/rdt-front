@@ -13,7 +13,7 @@ import Image from "next/image";
 import Link from "next/link"
 import ButtonWsp from "../ButtonWsp";
 
-export default function Container({ children }) {
+export default function Container({ footer= true,children }) {
   return (
     <>
       <ScriptsEx></ScriptsEx>
@@ -21,11 +21,12 @@ export default function Container({ children }) {
       <NavBar></NavBar>
       
       {children}
-      <ButtonWsp></ButtonWsp>
+      {/* <ButtonWsp></ButtonWsp> */}
       
       <DividerDos></DividerDos>
       <RegisterNow></RegisterNow>
-      <Footer></Footer>
+     
+      {footer? <Footer/>:null}
       
     </>
   );

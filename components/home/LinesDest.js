@@ -10,32 +10,26 @@ import Button from "../widtgets/Button";
 import CarruselOne from "../utils/CarruselOne";
 import { getLineFeatured } from "../../api/lineaApi";
 
-export default function LinesDest({text}) {
+export default function LinesDest({ text }) {
   const { locale } = useRouter();
   const [featured, setFeatured] = useState(null);
- const info = text?.filter((item,ind)=>item.locale === locale)[0]
-
+  const info = text?.filter((item, ind) => item.locale === locale)[0];
 
   async function getFeatured() {
     try {
       const res = await getLineFeatured(locale);
- 
       if ((res?.rows > 0) & (res?.status === "OK")) {
         setFeatured(res?.data);
       }
     } catch (error) {}
   }
-  
- 
 
   useEffect(() => {
     getFeatured();
-    
   }, []);
 
   return (
     <>
-    
       {featured ? (
         <div>
           <Divider></Divider>
@@ -43,7 +37,7 @@ export default function LinesDest({text}) {
             title={`${info?.line_featured}`}
             subtitle={`“${info?.shortname}”`}
           />
-          
+
           <DividerDos></DividerDos>
 
           <CarruselOne className="">
@@ -59,8 +53,7 @@ export default function LinesDest({text}) {
   );
 }
 
-function ItemFeatured({ item,text }) {
-  
+function ItemFeatured({ item, text }) {
   return (
     <div className="flex flex-col md:flex-row justify-around   items-center  space-y-2 p-0 m-0 my-10">
       <div className="item md:w-1/3  ">
@@ -70,19 +63,20 @@ function ItemFeatured({ item,text }) {
 
           <p className="ld_des">{item?.description}</p>
           <Link href={`/lineas/${item?.slug}`}>
-            <Button className="mt-3 px-5">{text?.btn}</Button>
+            <Button className="mt-3 px-5" type="button">{text?.btn}</Button>
           </Link>
         </div>
       </div>
       <div className="item md:w-1/3  flex justify-end ">
-      {item?.image?<Image
-        
-        src={item?.image}
-        className="flex self-end ld_img "
-        objectFit="fill"
-        width={381}
-        height={418}
-      ></Image>:null}
+        {item?.image ? (
+          <Image
+            src={item?.image}
+            className="flex self-end ld_img "
+            objectFit="fill"
+            width={381}
+            height={418}
+          ></Image>
+        ) : null}
       </div>
     </div>
   );

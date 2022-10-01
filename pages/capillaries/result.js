@@ -164,7 +164,7 @@ function ButtonsOptions({trans}) {
       <div ref={refDiv} className="hidden">
         <div className="p-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-900 border-b-0">
           <p className="mb-2 text-gray-600 ">
-          <Link href="/salones" ><a className="underline ">{trans?.view_shop}</a></Link>
+          <a href="https://www.kamill.pe/" target='_blank' rel="noreferrer"><a className="underline">{trans?.view_shop}</a></a>
           </p>
           <p className="text-gray-600 ">
           <Link href="/salones"><a className="underline	">{trans?.view_salon}</a></Link>

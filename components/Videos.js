@@ -7,23 +7,21 @@ import ModalAnimate from "./utils/ModalAnimate";
 import VideoItemHome from "./utils/VideoItemHome";
 
 function Videos() {
-    const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState(false);
+  const [urlSelected, setUrlSelected] = useState(null)
   const images = [
-    { url: "/images/imagevideo.png", url_video: "4LbC_U_qngY" },
-    { url: "/images/imagevideo.png", url_video: "4LbC_U_qngY" },
-    { url: "/images/imagevideo.png", url_video: "4LbC_U_qngY" },
-    { url: "/images/imagevideo.png", url_video: "4LbC_U_qngY" },
-    { url: "/images/imagevideo.png", url_video: "4LbC_U_qngY" },
-    { url: "/images/imagevideo.png", url_video: "4LbC_U_qngY" },
-    { url: "/images/imagevideo.png", url_video: "4LbC_U_qngY" },
-    { url: "/images/imagevideo.png", url_video: "4LbC_U_qngY" },
+    { url: "/realeas_videos/baby_blody.jpg", url_video: "9Cq2-GB3hbw" },
+    { url: "/realeas_videos/dream_chocolate.jpg", url_video: "jQFORSrZ1RM" },
+    { url: "/realeas_videos/golden_honey.jpg", url_video: "QNhCYDwEeu4" },
+    { url: "/realeas_videos/rock.jpg", url_video: "Lafy5ycNZ7s" },
   ];
 
-  const showDetail = async (url)=>{
+  const showDetail = async (url) => {
     setShowModal(true);
-    console.log(url)
-  }
-  
+    setUrlSelected(url)
+    console.log(url);
+  };
+
   return (
     <div className="container">
       <div className="row">
@@ -64,11 +62,14 @@ function Videos() {
         <ModalAnimate
           show={showModal}
           setShow={setShowModal}
-          className='w-full md:w-3/4'
+          className="w-full md:w-3/4"
           setYyLink={() => console.log()}
         >
           <div className=" flex justify-center items-center ">
-          <FullScreenVideo link={"4LbC_U_qngY"} className="w-96"></FullScreenVideo>
+            <FullScreenVideo
+              link={urlSelected}
+              className="w-96"
+            ></FullScreenVideo>
           </div>
         </ModalAnimate>
       ) : null}

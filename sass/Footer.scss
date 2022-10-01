@@ -48,14 +48,58 @@
 }
 
 .breakText li a {
-font-family: "Gotham";
-font-style: normal;
-font-weight: normal;
-font-size: 28px;
-line-height: 36px;
-/* identical to box height, or 129% */
-display: flex;
-align-items: center;
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 36px;
+    /* identical to box height, or 129% */
+    display: flex;
+    align-items: center;
 
-color: #89969F;
+    color: #89969F;
 }
+
+.footer-contact {
+    font-family: 'Arkitech';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    color: #000000;
+}
+
+.footer-email {
+    font-family: 'Gotham Light';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+    text-align: justify;
+}
+
+.footer-qts {
+    font-family: 'Gotham Light';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .footer-contact{
+        font-size: 18px;
+    }
+    .footer-email{
+        font-size: 16px;
+    }
+    .footer-qts{
+        font-size: 18px;
+    }
+ 
+    
+}
+
+

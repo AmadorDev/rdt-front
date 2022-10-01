@@ -4,12 +4,17 @@ import MenuItem from "./MenuItem";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import menuContext from "../../contexts/menu/menuContext";
-
+import translations from '../../staticTranslations.json'
 export default function NavBar() {
   const { defaultMenu } = useContext(menuContext);
 
   const { locale, locales, asPath } = useRouter();
 
+
+  const translate = translations?.top_header;
+  const txtTranslate = translate?.filter(
+    (item, ind) => item.locale === locale
+  )[0];
 
 
   const searchIcon = useRef(null);
@@ -50,8 +55,10 @@ export default function NavBar() {
                 <div className="language_currency text-right">
                   <ul>
                   <li className="space-x-2">
-                      <button className="btn-intranet">INTRANET</button>
-                      <button className="btn-intranet text-white">SALONES RADIANT</button>
+                      <button className="btn-intranet">{txtTranslate?.world}</button>
+                      <Link href='/salones'>
+                      <button className="btn-intranet text-white">{txtTranslate?.salon}</button>
+                      </Link>
                      
                     </li>
                     <li>

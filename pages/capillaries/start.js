@@ -15,6 +15,7 @@ import Container from "../../components/layouts/Container";
 import staticTrans from "../../staticTranslations.json";
 import Banner from "../../components/layouts/Banner";
 import ItemBreack from "../../components/layouts/ItemBreack";
+import Image from "next/image";
 
 export default function index() {
   const router = useRouter();
@@ -158,21 +159,25 @@ export default function index() {
               <ItemOptions
                 title={`${info_q_one?.options[0]}`}
                 classCirle="tc_quno"
+                image_name="liso"
                 onClick={() => selectedOption(0, "tc_quno", 0)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_one?.options[1]}`}
                 classCirle="tc_quno"
+                image_name="ondulado"
                 onClick={() => selectedOption(1, "tc_quno", 0)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_one?.options[2]}`}
                 classCirle="tc_quno"
+                image_name="rizado"
                 onClick={() => selectedOption(2, "tc_quno", 0)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_one?.options[3]}`}
                 classCirle="tc_quno"
+                image_name="nose"
                 onClick={() => selectedOption(3, "tc_quno", 0)}
               ></ItemOptions>
             </div>
@@ -204,26 +209,31 @@ export default function index() {
               <ItemOptions
                 title={`${info_q_two?.options[0]}`}
                 classCirle="tc_qdos"
+                image_name="tsin"
                 onClick={() => selectedOption(0, "tc_qdos", 1)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_two?.options[1]}`}
                 classCirle="tc_qdos"
+                image_name="tcon"
                 onClick={() => selectedOption(1, "tc_qdos", 1)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_two?.options[2]}`}
                 classCirle="tc_qdos"
+                image_name="alizado"
                 onClick={() => selectedOption(2, "tc_qdos", 1)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_two?.options[3]}`}
                 classCirle="tc_qdos"
+                image_name="alizadocon"
                 onClick={() => selectedOption(3, "tc_qdos", 1)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_two?.options[4]}`}
                 classCirle="tc_qdos"
+                image_name="nn"
                 onClick={() => selectedOption(4, "tc_qdos", 1)}
               ></ItemOptions>
             </div>
@@ -254,16 +264,19 @@ export default function index() {
               <ItemOptions
                 title={`${info_q_three?.options[0]}`}
                 classCirle="tc_qtres"
+                image_name="graso"
                 onClick={() => selectedOption(0, "tc_qtres", 2, "TRES")}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_three?.options[1]}`}
                 classCirle="tc_qtres"
+                image_name="seco"
                 onClick={() => selectedOption(1, "tc_qtres", 2, "TRES")}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_three?.options[2]}`}
                 classCirle="tc_qtres"
+                image_name="mixto"
                 onClick={() => selectedOption(2, "tc_qtres", 2, "TRES")}
               ></ItemOptions>
             </div>
@@ -294,31 +307,37 @@ export default function index() {
               <ItemOptions
                 title={`${info_q_four?.options[0]}`}
                 classCirle="tc_qcuatro"
+                image_name="amarro"
                 onClick={() => selectedOption(0, "tc_qcuatro", 3)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_four?.options[1]}`}
                 classCirle="tc_qcuatro"
+                image_name="plancho"
                 onClick={() => selectedOption(1, "tc_qcuatro", 3)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_four?.options[2]}`}
                 classCirle="tc_qcuatro"
+                image_name="loriso"
                 onClick={() => selectedOption(2, "tc_qcuatro", 3)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_four?.options[3]}`}
                 classCirle="tc_qcuatro"
+                image_name="secadora"
                 onClick={() => selectedOption(3, "tc_qcuatro", 3)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_four?.options[4]}`}
                 classCirle="tc_qcuatro"
+                image_name="secadoraplancha"
                 onClick={() => selectedOption(4, "tc_qcuatro", 3)}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_four?.options[5]}`}
                 classCirle="tc_qcuatro"
+                image_name="noarreglo"
                 onClick={() => selectedOption(5, "tc_qcuatro", 3)}
               ></ItemOptions>
             </div>
@@ -350,31 +369,38 @@ export default function index() {
               <ItemOptions
                 title={`${info_q_five?.options[0]}`}
                 classCirle="tc_qcinco"
+                image_name="hidratacion"
                 onClick={() => selectedOption(0, "tc_qcinco", 4, "CINCO")}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_five?.options[1]}`}
                 classCirle="tc_qcinco"
+                
+                image_name="brillosuavidad"
                 onClick={() => selectedOption(1, "tc_qcinco", 4, "CINCO")}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_five?.options[2]}`}
                 classCirle="tc_qcinco"
+                image_name="reparacion"
                 onClick={() => selectedOption(2, "tc_qcinco", 4, "CINCO")}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_five?.options[3]}`}
                 classCirle="tc_qcinco"
+                image_name="mantenimiento"
                 onClick={() => selectedOption(3, "tc_qcinco", 4, "CINCO")}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_five?.options[4]}`}
                 classCirle="tc_qcinco"
+                image_name="neutralizar"
                 onClick={() => selectedOption(4, "tc_qcinco", 4, "CINCO")}
               ></ItemOptions>
               <ItemOptions
                 title={`${info_q_five?.options[5]}`}
                 classCirle="tc_qcinco"
+                image_name="rejuvenicimiento"
                 onClick={() => selectedOption(5, "tc_qcinco", 4, "CINCO")}
               ></ItemOptions>
             </div>
@@ -396,13 +422,16 @@ export default function index() {
   );
 }
 
-function ItemOptions({ title, classCirle = "", onClick }) {
+function ItemOptions({ title, classCirle = "",image_name='not', onClick }) {
   return (
     <div className="flex justify-center items-center option-preg my-2">
-      <div className="item  w-1/7 md:w-4/4 justify-center  ">
-        <img src="/dev/tc_image.png" className="icon_img  md:ml-0 "></img>
+      <div className="item  w-1/7 md:w-4/4 justify-center flex self-center ">
+        {/* <img src="/capilar_icons/liso.png" className="icon_img  md:ml-0 "></img> */}
+       
+        <Image src={`/capilar_icons/${image_name}.png`} width={95} height={95} style={{height:'100%'}}  className="icon_img  md:ml-0 "></Image>
+        
       </div>
-      <div className="item  w-1/2 md:w-full m-0 ">
+      <div className="item  w-1/2 md:w-full ml-3">
         <span className="option_title">{title}</span>
         {/* <div className="flex">
           <div className="option_cuadros option_cuadros_md mr-2"></div>

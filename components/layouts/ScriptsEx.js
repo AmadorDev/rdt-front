@@ -9,6 +9,8 @@ export default function ScriptsEx() {
         strategy="afterInteractive"
       ></Script>
 
+      <Script src="/assets/js/simplyCountdown.js"  strategy="afterInteractive"></Script>
+
       
       {/* <!--popper min js--> */}
       <Script src="/assets/js/popper.js" strategy="afterInteractive"></Script>

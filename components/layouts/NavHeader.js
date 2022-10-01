@@ -4,10 +4,20 @@ import { useRouter } from "next/router";
 import React, { useContext } from "react";
 import menuContext from "../../contexts/menu/menuContext";
 import MenuItem from "./MenuItem";
+import translations from '../../staticTranslations.json'
 
 export default function NavTitle() {
   const { defaultMenu } = useContext(menuContext);
   const { locale, locales, asPath } = useRouter();
+
+
+  const translate = translations?.top_header;
+  const txtTranslate = translate?.filter(
+    (item, ind) => item.locale === locale
+  )[0];
+
+
+
   function showMenu() {
     document.querySelector(".off_canvars_overlay");
     document.querySelector(".offcanvas_menu_wrapper");
@@ -23,7 +33,6 @@ export default function NavTitle() {
 
 
   function showTogleMenu() {
-    console.log("clicl-------");
     let off_canvars_overlay = document.querySelector(".off_canvars_overlay");
     let offcanvas_menu_wrapper = document.querySelector(
       ".offcanvas_menu_wrapper"
@@ -59,7 +68,14 @@ export default function NavTitle() {
                     </a>
                   </div>
                   <div className="language_currency top">
-                    <ul>
+                    <ul className="flex flex-col items-center justify-center">
+                      <li className="space-y-3">
+                      <button className="btn-intranet">{txtTranslate?.world}</button>
+                      <Link href='/salones'>
+                      <button className="btn-intranet text-white">{txtTranslate?.salon}</button>
+                      </Link>
+                      </li>
+                    <div className="flex  justify-between">
                     <li>
                       <Link href={asPath} locale={"es-ES"}>
                         <img
@@ -67,7 +83,7 @@ export default function NavTitle() {
                           width={30}
                           height={30}
                           alt="Español"
-                          className="img-ad cursor-pointer"
+                          className="img-ad cursor-pointer mr-1"
                         ></img>
                       </Link>
                     </li>
@@ -79,10 +95,11 @@ export default function NavTitle() {
                           width={30}
                           height={30}
                           alt="Ingles"
-                          className="img-ad  cursor-pointer"
+                          className="img-ad  cursor-pointer ml-1"
                         ></img>
                       </Link>
                     </li>
+                    </div>
                     </ul>
                   </div>
 

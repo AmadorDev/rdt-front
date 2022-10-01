@@ -21,12 +21,14 @@ export default function HoverCate() {
   const [treeProducts, setTreeProducts] = useState(null);
   const [treeEvents, setTreeEvents] = useState(null);
   const [treeVideos, setTreeVideos] = useState(null);
-  console.log(treeEvents);
+  const [treeHairType, setHairType] = useState(null);
+ 
   function getLines(e, line) {
     setLines(line);
     setTreeProducts(null);
     setTreeEvents(null);
     setTreeVideos(null);
+    setHairType(null)
     let navs = document.querySelectorAll(".nav-item-cate-li");
     navs.forEach((element) => {
       if (element != e) {
@@ -42,9 +44,11 @@ export default function HoverCate() {
       setLineNow(line?.slug);
       const resp = await getTree(line?.id, locale);
       if (resp?.status === "OK") {
+      
         setTreeProducts(resp?.products);
-        setTreeEvents(resp?.events);
+        // setTreeEvents(resp?.events);
         // setTreeVideos(resp?.videos);
+        setHairType(resp?.hair_types);
       } else {
         setTreeProducts(null);
       }
@@ -112,9 +116,7 @@ export default function HoverCate() {
               {" "}
               <p className="tree-text uppercase">{info?.type_c}</p>
               <p className="">
-                {/* {treeEvents?.length > 0   ? treeEvents[0].event:''} */}
-                Encuentra las lineas especializadas para cada tipo de cabello:
-                Liso, ondulado, risado, seco, tinturado y malatratado.
+                {treeHairType?.length > 0   ? treeHairType[0].content:''}
               </p>
             </>
           ) : null}

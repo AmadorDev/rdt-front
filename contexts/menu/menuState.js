@@ -11,7 +11,7 @@ const menuState = ({ children }) => {
   const initialState = {
     defaultMenu: [
       { name: "Inicio", link: "/", locale: "es-ES" },
-      { name: "quienes somos", link: "/", locale: "es-ES" },
+      { name: "quienes somos", link: "/about-us", locale: "es-ES" },
       {
         name: "Productos",
         link: "/lines",
@@ -21,7 +21,7 @@ const menuState = ({ children }) => {
         locale: "es-ES",
       },
       { name: "Diagnóstico en línea ", link: "/capillaries", locale: "es-ES" },
-      { name: "Novedades", link: "/news", locale: "es-ES" },
+      { name: "Blog", link: "/news", locale: "es-ES" },
       
       // {
       //   name: "Deseo vender Radiant",
@@ -31,7 +31,7 @@ const menuState = ({ children }) => {
       // },
 
       { name: "Home", link: "/", locale: "en-US" },
-      { name: "about us", link: "/", locale: "en-US" },
+      { name: "about us", link: "/about-us", locale: "en-US" },
       {
         name: "Products",
         link: "/lines",
@@ -41,7 +41,7 @@ const menuState = ({ children }) => {
         locale: "en-US",
       },
       { name: "Online diagnosis ", link: "/capillaries", locale: "en-US" },
-      { name: "News", link: "/news", locale: "en-US" },
+      { name: "Blog", link: "/news", locale: "en-US" },
 
       
       // {
