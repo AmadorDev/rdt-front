@@ -21,6 +21,7 @@
     "react-hot-toast": "^2.2.0",
     "react-responsive-carousel": "^3.2.22",
     "sass": "^1.49.0",
+    "sharp": "^0.31.1",
     "swiper": "^8.0.5"
   },
   "devDependencies": {

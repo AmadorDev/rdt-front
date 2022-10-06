@@ -69,28 +69,69 @@ $about_gris: #696969;
     width: 259px;
 }
 
+//mission and vision
+.card-mission {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.img-mission-card {
+    width: 100%;
+    height: 669px;
+}
+
+.about-mission-title {
+    font-family: 'Arkitech';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 39px;
+    color: $about_gris;
+}
+
+.about-mission-desc {
+    font-family: 'Gotham Light';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 32px;
+    color: $about_black;
+}
+
+.about-bottom-lema {
+    font-family: 'Gotham Light';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 40px;
+    text-align: justify;
+    color: $about_black;
+}
 
 
 
 //---page questions
-.txt-title-p-qts{
+.txt-title-p-qts {
     color: #020101b4;
     font-weight: 600;
 }
-.txt-title-qts{
+
+.txt-title-qts {
     color: #696969;
     font-weight: 600;
 }
-.title-principal-page-qts{
+
+.title-principal-page-qts {
     color: $about_black;
     font-family: 'Arkitech';
 
 }
 
-.about-cover-initial{
+.about-cover-initial {
     height: 1057px;
-    width:100% ;
+    width: 100%;
 }
+
 @media only screen and (max-width: 600px) {
     .margin-left {
         margin-left: 0;
@@ -104,10 +145,12 @@ $about_gris: #696969;
     .about_title {
         font-size: 20px;
     }
-    .about_subTitle{
+
+    .about_subTitle {
         font-size: 16px;
     }
-    .about_transform{
+
+    .about_transform {
         font-size: 28px;
         text-align: center;
     }
@@ -125,8 +168,24 @@ $about_gris: #696969;
         height: 250px;
         width: 200px;
     }
-    .about-cover-initial{
-        
+
+    .about-cover-initial {
+
         height: 250px;
+    }
+
+    .img-mission-card {
+        height: 339px;
+    }
+
+    .about-mission-title {
+        font-size: 20px;
+    }
+
+    .about-mission-desc {
+        font-size: 16px;
+    }
+    .about-bottom-lema{
+        font-size: 22px;
     }
 }

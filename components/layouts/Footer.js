@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <Image src="/images/logo.png" width={332} height={75}></Image>
+                <Image src="/images/logo.png" width={209} height={48}></Image>
               </div>
             </div>
             <div className="row justify-content-between ">
@@ -25,9 +25,6 @@ export default function Footer() {
                 </p>
                 <div>
                   <a>
-                    <Image src="/images/fb.png" width={30} height={30}></Image>
-                  </a>
-                  <a className="ml-3">
                     <Image
                       src="/images/inst.png"
                       width={30}
@@ -35,16 +32,20 @@ export default function Footer() {
                     ></Image>
                   </a>
                   <a className="ml-3">
-                    <Image src="/images/yt.png" width={30} height={30}></Image>
+                    <Image src="/images/fb.png" width={30} height={30}></Image>
+                  </a>
+
+                  <a className="ml-3">
+                    <Image src="/images/yt.png" width={40} height={30}></Image>
                   </a>
                 </div>
               </div>
-              <div className="col">
+              <div className="col text-center ">
                 <p className="footer-contact mt-5">ENCUÉNTRANOS</p>
                 <Image
                   src="/images/map.png"
-                  width={433}
-                  height={187}
+                  width={329}
+                  height={172}
                   className="mt-3"
                 ></Image>
               </div>
@@ -54,7 +55,6 @@ export default function Footer() {
                 <p className="text-right footer-qts cursor-pointer">
                   <Link href="frequent-questions"> Preguntas frecuentes </Link>
                   <br></br>
-                  
 
                   <Link href="usage-policies"> Política de uso </Link>
                 </p>

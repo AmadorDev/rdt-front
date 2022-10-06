@@ -9,7 +9,7 @@ export default function OurValues() {
   const txtTranslate = translate?.filter(
     (item, ind) => item.locale === locale
   )[0];
-  console.log(txtTranslate);
+
   return (
     <div>
       <TitleAndSubtitle title={`${txtTranslate?.title}`} />
