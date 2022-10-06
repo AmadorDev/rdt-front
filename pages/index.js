@@ -23,7 +23,6 @@ export default function index() {
         textLeft={text_home?.left}
         textRight={text_home?.right}
       ></LastInfo>
-
       <Contador></Contador>
     </Container>
   );

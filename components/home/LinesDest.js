@@ -37,9 +37,7 @@ export default function LinesDest({ text }) {
             title={`${info?.line_featured}`}
             subtitle={`“${info?.shortname}”`}
           />
-
           <DividerDos></DividerDos>
-
           <CarruselOne className="">
             {featured?.map((item, ind) => (
               <SwiperSlide key={ind}>
