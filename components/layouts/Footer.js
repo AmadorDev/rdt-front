@@ -1,10 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useContext } from "react";
-import menuContext from "../../contexts/menu/menuContext";
+import { useRouter } from "next/router";
 
+import translations from "../../staticTranslations.json";
 export default function Footer() {
-  const { info, menu_footer } = useContext(menuContext);
+  const { locale } = useRouter();
+  const translate = translations?.menu_footer;
+  const txtTranslate = translate?.filter(
+    (item, ind) => item.locale === locale
+  )[0];
+
+
   return (
     <>
       {/*footer area start*/}
@@ -18,10 +24,10 @@ export default function Footer() {
             </div>
             <div className="row justify-content-between ">
               <div className="col">
-                <p className="footer-contact mt-5">CONTÁCTANOS</p>
+                <p className="footer-contact mt-5">{txtTranslate?.contact}</p>
                 <p className="footer-email mt-3">
-                  Correo : <br />
-                  radiant@radiant.com
+                  {txtTranslate?.email_title} : <br />
+                  {txtTranslate?.email}
                 </p>
                 <div>
                   <a>
@@ -41,7 +47,7 @@ export default function Footer() {
                 </div>
               </div>
               <div className="col text-center ">
-                <p className="footer-contact mt-5">ENCUÉNTRANOS</p>
+                <p className="footer-contact mt-5">{txtTranslate?.find_us}</p>
                 <Image
                   src="/images/map.png"
                   width={329}
@@ -51,12 +57,15 @@ export default function Footer() {
               </div>
               <div className="col ">
                 {" "}
-                <p className="footer-contact mt-5 text-right">SERVICIOS</p>
+                <p className="footer-contact mt-5 text-right">{txtTranslate?.services}</p>
                 <p className="text-right footer-qts cursor-pointer">
-                  <Link href="frequent-questions"> Preguntas frecuentes </Link>
+                  <Link href="/frequent-questions">{txtTranslate?.questions}</Link>
+                 
                   <br></br>
 
-                  <Link href="usage-policies"> Política de uso </Link>
+                  <Link href="usage-policies">{txtTranslate?.policy}</Link>
+                  
+                  
                 </p>
               </div>
             </div>
@@ -66,8 +75,4 @@ export default function Footer() {
       {/*footer area end*/}
     </>
   );
-}
-
-function divJa() {
-  return <div></div>;
 }

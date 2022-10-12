@@ -106,13 +106,13 @@ const menuState = ({ children }) => {
       value: stinfo ? stinfo[0] : {},
     });
 
-    const stamenufooter = jsonTranslation.menu_footer.filter(
-      (item) => item.locale === locale
-    );
-    dispatch({
-      type: "STATIC_FOOTER",
-      value: stamenufooter,
-    });
+    // const stamenufooter = jsonTranslation.menu_footer.filter(
+    //   (item) => item.locale === locale
+    // );
+    // dispatch({
+    //   type: "STATIC_FOOTER",
+    //   value: stamenufooter,
+    // });
 
     const staticline = jsonTranslation.lines.filter(
       (item) => item.locale === locale

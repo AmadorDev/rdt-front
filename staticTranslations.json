@@ -38,34 +38,26 @@
     "menu_footer": [
         {
             "locale": "en-US",
-            "title": "Questions",
-            "url": "questions"
+            "contact": "CONTACT US",
+            "find_us":"FIND US",
+            "services":"SERVICES",
+            "email_title":"Email",
+            "email":"contacto.radiant@lifecorp.pe",
+            "questions":"Frequent questions",
+            "policy":"Usage policies"
         },
         {
             "locale": "es-ES",
-            "title": "Preguntas frecuentes",
-            "url": "questions"
-        },
-        {
-            "locale": "en-US",
-            "title": "Usage policy",
-            "url": "usage-policy"
-        },
-        {
-            "locale": "es-ES",
-            "title": "Politica de uso",
-            "url": "usage-policy"
-        },
-        {
-            "locale": "en-US",
-            "title": "Contact Us",
-            "url": "contact-us"
-        },
-        {
-            "locale": "es-ES",
-            "title": "contactenos",
-            "url": "contact-us"
+            "contact": "CONTÁCTANOS",
+            "find_us":"ENCUÉNTRANOS",
+            "services":"SERVICIOS",
+            "email_title":"Correo",
+            "email":"contacto.radiant@lifecorp.pe",
+            "questions":"Preguntas frecuentes",
+            "policy":"Política de uso "
         }
+        
+        
     ],
     "lines": [
         {
