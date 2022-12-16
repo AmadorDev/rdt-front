@@ -23,7 +23,7 @@ export default function MissionAndVision() {
         </div>
       </div>
       <DividerDos></DividerDos>
-      <p className="about-bottom-lema">
+      <p className="about-bottom-lema text-center">
       {txtTranslate?.description}
       </p>
     </div>
@@ -33,8 +33,8 @@ export default function MissionAndVision() {
 function Card({image='mision',title,description}) {
   return (
     <div className="flex flex-column card-mission">
-      <div className="relative img-mission-card">
-        <Image src={`/images/${image}.png`} layout="fill"></Image>
+      <div className="relative flex justify-center pt-4">
+        <Image src={`/images/${image}.png`} height={400} width={438}></Image>
       </div>
       <div className="p-5">
         <p className="about-mission-title">{title}</p>

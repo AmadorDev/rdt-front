@@ -16,7 +16,7 @@ export default function AboutUs() {
       <div className="col-12 col-md-6">
         <p className="about_title mt-3 mt-md-0 ">{txtTranslate?.title}</p>
         <p className="about_subTitle">{txtTranslate?.desc_one}</p>
-        <p className="about_transform">{txtTranslate?.transform}</p>
+        <p className="about_transform ">{txtTranslate?.transform}</p>
         <p className="about_subTitle">{txtTranslate?.desc_two}</p>
       </div>
     </div>

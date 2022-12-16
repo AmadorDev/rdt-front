@@ -4,18 +4,16 @@ import MenuItem from "./MenuItem";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import menuContext from "../../contexts/menu/menuContext";
-import translations from '../../staticTranslations.json'
+import translations from "../../staticTranslations.json";
 export default function NavBar() {
   const { defaultMenu } = useContext(menuContext);
 
   const { locale, locales, asPath } = useRouter();
 
-
   const translate = translations?.top_header;
   const txtTranslate = translate?.filter(
     (item, ind) => item.locale === locale
   )[0];
-
 
   const searchIcon = useRef(null);
   const stickyRef = useRef(null);
@@ -54,12 +52,22 @@ export default function NavBar() {
               <div className="col-lg-8 col-md-8">
                 <div className="language_currency text-right">
                   <ul>
-                  <li className="space-x-2">
-                      <button className="btn-intranet">{txtTranslate?.world}</button>
-                      <Link href='/salones'>
-                      <button className="btn-intranet text-white">{txtTranslate?.salon}</button>
+                    <li className="space-x-2">
+                      <a
+                        href="https://intranet.placentaliferadiant.com/login"
+                        target="_blank"
+                        without
+                        rel="noreferrer"
+                      >
+                        <button className="btn-intranet py-2">
+                          {txtTranslate?.world}
+                        </button>
+                      </a>
+                      <Link href="/salones">
+                        <button className="btn-intranet text-white">
+                          {txtTranslate?.salon}
+                        </button>
                       </Link>
-                     
                     </li>
                     <li>
                       <Link href={asPath} locale={"es-ES"}>
@@ -84,7 +92,6 @@ export default function NavBar() {
                         ></img>
                       </Link>
                     </li>
-                    
                   </ul>
                 </div>
               </div>
@@ -125,32 +132,34 @@ export default function NavBar() {
                       </ul>
                     </nav>
                   </div>
-                  
                 </div>
               </div>
               <div className="col-1">
-
                 {/*main menu end*/}
                 <div className="header_account_area header_account_area_per ">
-                    <div className="header_account_list search_list">
-                      <a onClick={(e) => handlerEvent(e)}>
-                        <i className="icon-magnifier icons color-icon" />
-                      </a>
-                      <div className="dropdown_search" ref={searchIcon}>
-                        <form action="#">
-                          <input placeholder="" type="text" />
-                          <button type="submit">
-                            <i className="icon-magnifier icons " />
-                          </button>
-                        </form>
-                      </div>
-                    </div>
-                    <div className="header_account_list  mini_cart_wrapper ">
-                      <a href="#">
-                      <button className="btn-store text-white">STORE</button>
-                      </a>
+                  <div className="header_account_list search_list">
+                    <a onClick={(e) => handlerEvent(e)}>
+                      <i className="icon-magnifier icons color-icon" />
+                    </a>
+                    <div className="dropdown_search" ref={searchIcon}>
+                      <form action="#">
+                        <input placeholder="" type="text" />
+                        <button type="submit">
+                          <i className="icon-magnifier icons " />
+                        </button>
+                      </form>
                     </div>
                   </div>
+                  <div className="header_account_list  mini_cart_wrapper ">
+                    <a
+                      href="https://www.kamill.pe/busca?ft=RADIANT"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button className="btn-store text-white">STORE</button>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

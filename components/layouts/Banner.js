@@ -11,7 +11,7 @@ const {banner,setBanner} = useContext(menuContext)
 
   const [images, setImages] = useState(banner);
   const { locale } = useRouter();
-  console.log("cover",banner.length)
+
   const getImages = async () => {
     try {
     

@@ -10,8 +10,14 @@ import DividerDos from "../components/utils/DividerDos";
 export default function index() {
   return (
     <Container>
-      <div className=" relative about-cover-initial">
-        <Image src="/images/about.png" alt="" layout="fill" objectFit="cover" />
+      <div style={{ width: "100%" }}>
+        <Image
+          src="/images/about_.png"
+          width={1440}
+          height={567}
+          layout="responsive"
+          alt="alt"
+        ></Image>
       </div>
 
       <div className="container">
@@ -20,7 +26,7 @@ export default function index() {
         <Divider></Divider>
         <OurValues></OurValues>
         <Divider></Divider>
-        <MissionAndVision/>
+        <MissionAndVision />
       </div>
     </Container>
   );

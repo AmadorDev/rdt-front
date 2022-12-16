@@ -28,11 +28,11 @@ export default function LastInfo({textLeft,textRight}) {
             </Button>
           </ItemWithImage>
 
-          <ItemWithImage fondImg="/dev/fonddos.png">
-            <p className=" t_nove_title">
+          <ItemWithImage fondImg="">
+            <p className=" t_nove_title text-white">
               {t_right?.title}
             </p>
-            <p className="t_nove_des my-3">
+            <p className="t_nove_des my-3 text-white">
             {t_right?.content}
             </p>
 
