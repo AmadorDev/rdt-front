@@ -3,12 +3,12 @@ import React, { useRef } from "react";
 import Container from "../components/layouts/Container";
 import translations from "../staticTranslations.json";
 export default function frequentQuestions() {
-  // const { locale } = useRouter();
-  // const translate = translations?.page_questions;
-  // const txtTranslate = translate?.filter(
-  //   (item, ind) => item.locale === locale
-  // )[0];
-return;
+  const { locale } = useRouter();
+  const translate = translations?.page_questions;
+  const txtTranslate = translate?.filter(
+    (item, ind) => item.locale === locale
+  )[0];
+
   return (
     <Container>
       <div className="container  ">
