@@ -10,20 +10,23 @@ export default function Footer() {
     (item, ind) => item.locale === locale
   )[0];
 
-
   return (
     <>
       {/*footer area start*/}
       <footer className="footer_widgets">
         <div className="footer_top">
           <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <Image src="/images/logo.png" width={209} height={48}></Image>
-              </div>
-            </div>
             <div className="row justify-content-between ">
               <div className="col">
+                <div className="row">
+                  <div className="col-12">
+                    <Image
+                      src="/images/logo.png"
+                      width={209}
+                      height={48}
+                    ></Image>
+                  </div>
+                </div>
                 <p className="footer-contact mt-5">{txtTranslate?.contact}</p>
                 <p className="footer-email mt-3">
                   {txtTranslate?.email_title} : <br />
@@ -56,16 +59,17 @@ export default function Footer() {
                 ></Image>
               </div>
               <div className="col ">
-                {" "}
-                <p className="footer-contact mt-5 text-right">{txtTranslate?.services}</p>
+                <p className="footer-contact mt-5 text-right">
+                  {txtTranslate?.services}
+                </p>
                 <p className="text-right footer-qts cursor-pointer">
-                  <Link href="/frequent-questions">{txtTranslate?.questions}</Link>
-                 
+                  <Link href="/frequent-questions">
+                    {txtTranslate?.questions}
+                  </Link>
+
                   <br></br>
 
                   <Link href="usage-policies">{txtTranslate?.policy}</Link>
-                  
-                  
                 </p>
               </div>
             </div>
