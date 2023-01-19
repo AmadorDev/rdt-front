@@ -3,7 +3,7 @@ import { SwiperSlide } from "swiper/react";
 import SliderOne from "../SliderOne";
 
 export default function DetailImageProduct({ images }) {
-  console.log("imagesss",images)
+  
   return (
     <div className="row justify-content-center">
       <div className={`col-12 col-md-12  image-container`}>

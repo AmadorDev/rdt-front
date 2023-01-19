@@ -11,7 +11,7 @@ export default function AboutUs() {
   return (
     <div className="row justify-content-around align-items-center">
       <div className="col-12 col-md-6">
-        <img src="/images/one_about.png"></img>
+        <img src="/images/one_about_.png"></img>
       </div>
       <div className="col-12 col-md-6">
         <p className="about_title mt-3 mt-md-0 ">{txtTranslate?.title}</p>

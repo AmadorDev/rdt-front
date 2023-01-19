@@ -25,8 +25,8 @@ export default function index() {
         <AboutUs></AboutUs>
         <Divider></Divider>
         <OurValues></OurValues>
-        <Divider></Divider>
-        <MissionAndVision />
+        {/* <Divider></Divider>
+        <MissionAndVision /> */}
       </div>
     </Container>
   );
