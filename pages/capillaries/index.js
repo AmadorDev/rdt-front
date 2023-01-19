@@ -28,7 +28,7 @@ export default function index() {
 
   return (
     <Container>
-      <Banner></Banner>
+      {/* <Banner></Banner> */}
       <Breakcrums>
         <ItemBreack title={info_break?.home} ruta="/"></ItemBreack>
       </Breakcrums>

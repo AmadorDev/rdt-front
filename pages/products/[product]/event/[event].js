@@ -7,7 +7,7 @@ import EventDetail from "../../../../components/lines/product/event/EventDetail"
 function event({ event ,query}) {
   return (
     <Container>
-      <Banner></Banner>
+      {/* <Banner></Banner> */}
       <EventDetail event={event} query={query}>event</EventDetail>
     </Container>
   );
