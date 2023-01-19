@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import TitleAndSubtitle from "../../components/utils/TitleAndSubtitle";
 import ItemProd from "../../components/List/ItemProd";
@@ -16,25 +16,24 @@ import Events from "../../components/news/Events";
 import Gallery from "../../components/news/Gallery";
 import SliderCover from "../../components/layouts/SliderCover";
 
-
-
-export default function index() {
+export default function Index() {
   const router = useRouter();
-
 
   const { query, locale } = useRouter();
   const [news, setNews] = useState(null);
-  const [translation, setTranslation] = useState(null)
-  const [events, setEvents] = useState(null)
+  const [translation, setTranslation] = useState(null);
+  const [events, setEvents] = useState(null);
 
   const SeventRef = useRef(null);
   const scrollToElement = () => SeventRef.current.scrollIntoView();
 
-  const info = _tran?.global_locale.filter((item, ind) => item.locale === locale)[0];
+  const info = _tran?.global_locale.filter(
+    (item, ind) => item.locale === locale
+  )[0];
   const ListNews = async () => {
     try {
       const resp = await getNews(locale);
-     
+
       setTranslation(resp?.translation);
       if (resp?.rows > 0) {
         setNews(resp.data);
@@ -42,32 +41,27 @@ export default function index() {
     } catch (error) {}
   };
 
-  const getEvent = async ()=>{
+  const getEvent = async () => {
     try {
       const resp = await getEvents(locale);
       if (resp?.rows > 0) {
         setEvents(resp.data);
-        if(query?.sev){
-          scrollToElement()
+        if (query?.sev) {
+          scrollToElement();
         }
-        
       }
     } catch (error) {}
-  }
+  };
 
   useEffect(() => {
     ListNews();
     getEvent();
-    
   }, []);
 
   return (
-    
-   
     <Container coverDefault={true}>
-     
-      <SliderCover/>
-     
+      <SliderCover />
+
       <Breakcrums>
         <ItemBreack title={`${info?.home}`} ruta="/"></ItemBreack>
       </Breakcrums>
@@ -78,7 +72,7 @@ export default function index() {
         // description={translation?.description}
       ></TitleAndSubtitle>
       <DividerDos></DividerDos>
-     
+
       <div className="container">
         <div className="row justify-center">
           {news?.map((item, index) => (
@@ -99,11 +93,10 @@ export default function index() {
           ))}
         </div>
         <div ref={SeventRef}></div>
-        <Events data={events} ></Events>
-        
+        <Events data={events}></Events>
+
         <Gallery></Gallery>
       </div>
     </Container>
-   
   );
 }
