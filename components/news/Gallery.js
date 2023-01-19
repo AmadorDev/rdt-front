@@ -56,6 +56,7 @@ function Gallery() {
                     height={385}
                     onClick={() => showImage(image)}
                     className="cursor-pointer"
+                    alt={image?.title}
                   ></Image>
                 </SwiperSlide>
               ))}
@@ -71,6 +72,7 @@ function Gallery() {
                     height={849}
                     onClick={() => showImage(image)}
                     className="cursor-pointer"
+                    alt={image?.title}
                   ></Image>
                 </SwiperSlide>
               ))}

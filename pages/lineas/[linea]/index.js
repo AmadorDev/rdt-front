@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { SwiperSlide } from "swiper/react";
 import getDetailLinea, { getProductsByLinea } from "../../../api/lineaApi";
 import Banner from "../../../components/layouts/Banner";
 import Breakcrums from "../../../components/layouts/Breakcrums";
@@ -20,8 +19,9 @@ import ModalTa from "../../../components/utils/ModalTa";
 import TitleAndSubtitle from "../../../components/utils/TitleAndSubtitle";
 import Button from "../../../components/widtgets/Button";
 import menuContext from "../../../contexts/menu/menuContext";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-function index() {
+export default function Index() {
   const { line_st } = useContext(menuContext);
   const [redirect, setSedirect] = useState(0);
   const [linea, setLinea] = useState(null);
@@ -65,9 +65,11 @@ function index() {
     return q.toLowerCase();
   }
 
-  useEffect(async () => {
+  useEffect(() => {
     if (isMounted.current) {
-      getLinea();
+      getLinea().then(() => {
+        // set state and do other things here
+      });
     }
 
     return () => {
@@ -77,12 +79,30 @@ function index() {
 
   return (
     <Container>
-      <Banner></Banner>
+      {/*<Banner></Banner>*/}
 
       <Breakcrums>
         <ItemBreack title={`${line_st?.line}`} ruta="/"></ItemBreack>
         <ItemBreack title={`${linea?.data.name}`}></ItemBreack>
       </Breakcrums>
+
+      {/* ***************************** Prueba slider******************* */}
+      <Swiper>
+        {linea?.files.map((image, ind) => (
+          <SwiperSlide key={ind}>
+            <div className="flex mx-auto justify-center">
+              <div className="" style={{ width: "100%" }}>
+                <Image
+                  src={image.url}
+                  width={910}
+                  height={418}
+                  alt="..."
+                ></Image>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
       {/* ***************************** LINE******************* */}
       <Divider></Divider>
       <TitleAndSubtitle
@@ -96,7 +116,7 @@ function index() {
         {/* ***************************** SLIDER******************* */}
         <div className="row justify-content-center">
           <div className="col-12">
-            <CarruselSolo className="">
+            {/*<CarruselSolo className="">
               {linea?.files.map((image, ind) => (
                 <SwiperSlide key={ind}>
                   <div className="flex mx-auto justify-center">
@@ -111,7 +131,7 @@ function index() {
                   </div>
                 </SwiperSlide>
               ))}
-            </CarruselSolo>
+            </CarruselSolo>*/}
           </div>
           <div className="md:mx-5 text-left mt-4  col-10">
             <span className="ln_desc ">{linea?.data.description}</span>
@@ -158,5 +178,3 @@ function index() {
     </Container>
   );
 }
-
-export default index;
