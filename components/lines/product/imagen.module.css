@@ -1,0 +1,11 @@
+.swiper {
+  height: 300px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.contenedorSwiper {
+  display: flex;
+  padding: 5rem;
+}

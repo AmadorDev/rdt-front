@@ -2,6 +2,7 @@ import React from "react";
 import { SwiperSlide } from "swiper/react";
 import SliderOne from "./SliderOne";
 import Image from "next/image";
+import styles from "./card.module.css";
 
 export const CardProduct = ({
   images,
@@ -15,8 +16,15 @@ export const CardProduct = ({
     <div className="p-3 my-5 " style={{ width: "100%" }}>
       <SliderOne loop={images?.length > 1 ? true : false}>
         {images?.map((image, index) => (
-          <SwiperSlide key={index} >
-            <Image  src={image?.url} width={340} height={250}></Image>
+          <SwiperSlide key={index}>
+            <div className={styles.card}>
+              <Image
+                src={image?.url}
+                objectFit="contain"
+                layout="fill"
+                alt="..."
+              ></Image>
+            </div>
           </SwiperSlide>
         ))}
       </SliderOne>

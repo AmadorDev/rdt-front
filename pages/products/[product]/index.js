@@ -7,7 +7,7 @@ import Product from "../../../components/lines/product/Product";
 function Detail({ product, query, locale }) {
   return (
     <Container>
-      <Banner></Banner>
+      {/*<Banner></Banner>*/}
       <Product query={query} locale={locale} product={product}></Product>
     </Container>
   );

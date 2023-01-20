@@ -58,7 +58,7 @@ function Events({ data }) {
       >
         {data?.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="">
+            <div className="relative">
               <Image
                 src={item?.image}
                 width={512}
@@ -67,6 +67,7 @@ function Events({ data }) {
                 alt={item?.title}
                 onClick={() => router.push(`/events/${item.slug}`)}
               ></Image>
+              <p>{item?.title}</p>
               <Button
                 className="px-5"
                 onClick={() => router.push(`/events/${item.slug}`)}

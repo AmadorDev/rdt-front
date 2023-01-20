@@ -21,7 +21,9 @@ import Button from "../../../components/widtgets/Button";
 import menuContext from "../../../contexts/menu/menuContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export default function Index() {
+import styles from "./lineas.module.css";
+
+function Index() {
   const { line_st } = useContext(menuContext);
   const [redirect, setSedirect] = useState(0);
   const [linea, setLinea] = useState(null);
@@ -90,15 +92,13 @@ export default function Index() {
       <Swiper>
         {linea?.files.map((image, ind) => (
           <SwiperSlide key={ind}>
-            <div className="flex mx-auto justify-center">
-              <div className="" style={{ width: "100%" }}>
-                <Image
-                  src={image.url}
-                  width={910}
-                  height={418}
-                  alt="..."
-                ></Image>
-              </div>
+            <div className={styles.contenedor}>
+              <Image
+                src={image.url}
+                layout="fill"
+                objectFit="contain"
+                alt="..."
+              ></Image>
             </div>
           </SwiperSlide>
         ))}
@@ -178,3 +178,5 @@ export default function Index() {
     </Container>
   );
 }
+
+export default Index;
