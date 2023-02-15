@@ -8,7 +8,7 @@ import Banner from "../components/layouts/Banner";
 import Videos from "../components/Videos";
 import Contador from "../components/widtgets/Contador";
 
-export default function index() {
+export default function Index() {
   const text_home = translations?.text_home;
 
   return (

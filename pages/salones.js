@@ -13,9 +13,8 @@ import Container from "../components/layouts/Container";
 import { getSalon } from "../api/salonApi";
 import InfoSalon from "../components/salon/InfoSalon";
 
-function salones({ data ,translation}) {
+function Salones({ data, translation }) {
   const [salonSelect, setSalonSelect] = useState(null);
-
 
   return (
     <Container>
@@ -44,19 +43,18 @@ function salones({ data ,translation}) {
   );
 }
 
-export async function getServerSideProps({locale}) {
-
+export async function getServerSideProps({ locale }) {
   try {
     const res = await getSalon(locale);
-   
+
     if (res?.status !== "Fail") {
       return {
         props: {
           data: res?.data,
-          translation:res?.translation
+          translation: res?.translation,
         },
       };
-    }else{
+    } else {
       return {
         redirect: {
           destination: "/",
@@ -74,4 +72,4 @@ export async function getServerSideProps({locale}) {
   }
 }
 
-export default salones;
+export default Salones;

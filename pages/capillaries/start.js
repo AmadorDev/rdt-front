@@ -50,7 +50,6 @@ export default function index() {
     (item) => item.locale === locale
   )[0];
 
-
   useEffect(() => {
     resetQuestion();
     resetMark();
@@ -111,11 +110,10 @@ export default function index() {
   }
   return (
     <Container>
-      <Banner></Banner>
+      {/*<Banner></Banner>*/}
       <Breakcrums>
-      <ItemBreack title={info_glob?.home} ruta='/'></ItemBreack>
-      <ItemBreack title={info_test?.title} ></ItemBreack>
-      
+        <ItemBreack title={info_glob?.home} ruta="/"></ItemBreack>
+        <ItemBreack title={info_test?.title}></ItemBreack>
       </Breakcrums>
       <Divider></Divider>
       <TitleAndSubtitle
@@ -375,7 +373,6 @@ export default function index() {
               <ItemOptions
                 title={`${info_q_five?.options[1]}`}
                 classCirle="tc_qcinco"
-                
                 image_name="brillosuavidad"
                 onClick={() => selectedOption(1, "tc_qcinco", 4, "CINCO")}
               ></ItemOptions>
@@ -422,14 +419,19 @@ export default function index() {
   );
 }
 
-function ItemOptions({ title, classCirle = "",image_name='not', onClick }) {
+function ItemOptions({ title, classCirle = "", image_name = "not", onClick }) {
   return (
     <div className="flex justify-center items-center option-preg my-2">
       <div className="item  w-1/7 md:w-4/4 justify-center flex self-center ">
         {/* <img src="/capilar_icons/liso.png" className="icon_img  md:ml-0 "></img> */}
-       
-        <Image src={`/capilar_icons/${image_name}.png`} width={95} height={95} style={{height:'100%'}}  className="icon_img  md:ml-0 "></Image>
-        
+
+        <Image
+          src={`/capilar_icons/${image_name}.png`}
+          width={95}
+          height={95}
+          style={{ height: "100%" }}
+          className="icon_img  md:ml-0 "
+        ></Image>
       </div>
       <div className="item  w-1/2 md:w-full ml-3">
         <span className="option_title">{title}</span>

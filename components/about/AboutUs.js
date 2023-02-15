@@ -11,13 +11,13 @@ export default function AboutUs() {
   return (
     <div className="row justify-content-around align-items-center">
       <div className="col-12 col-md-6">
-        <img src="/images/one_about_.png"></img>
+        <img src="/images/one_about_.png" />
       </div>
       <div className="col-12 col-md-6">
-        <p className="about_title mt-3 mt-md-0 ">{txtTranslate?.title}</p>
-        <p className="about_subTitle">{txtTranslate?.desc_one}</p>
+        <h1 className="about_title mt-3 mt-md-0 ">{txtTranslate?.title}</h1>
+        <p>{txtTranslate?.desc_one}</p>
         <p className="about_transform ">{txtTranslate?.transform}</p>
-        <p className="about_subTitle">{txtTranslate?.desc_two}</p>
+        <p>{txtTranslate?.desc_two}</p>
       </div>
     </div>
   );

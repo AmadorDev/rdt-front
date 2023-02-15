@@ -51,12 +51,15 @@ export default function Footer() {
               </div>
               <div className="col text-center ">
                 <p className="footer-contact mt-5">{txtTranslate?.find_us}</p>
-                <Image
-                  src="/images/map.png"
-                  width={329}
-                  height={172}
-                  className="mt-3"
-                ></Image>
+                <Link href="/salones" passHref>
+                  <Image
+                    src="/images/map.png"
+                    width={329}
+                    height={172}
+                    className="mt-3"
+                    alt="mapa"
+                  ></Image>
+                </Link>
               </div>
               <div className="col ">
                 <p className="footer-contact mt-5 text-right">

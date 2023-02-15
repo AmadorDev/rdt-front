@@ -50,7 +50,7 @@ export default function result() {
 
     try {
       if (!line_id) return router.back();
-      const resp = await getResultTest(locale,line_id);
+      const resp = await getResultTest(locale, line_id);
       if (resp?.line) {
         setLinea(resp?.line);
         setLoader(false);
@@ -63,7 +63,7 @@ export default function result() {
 
   return (
     <Container>
-      <Banner />
+      {/*<Banner />*/}
       <Breakcrums>
         {/* <ItemBreack title={} ruta='/'/> */}
         <ItemBreack title={_tranInfo?.title} ruta="/capillaries/start" />
@@ -128,7 +128,7 @@ function ResultLine({ line, _tranInfo }) {
   );
 }
 
-function ButtonsOptions({trans}) {
+function ButtonsOptions({ trans }) {
   const refDiv = useRef(null);
   const svgRef = useRef(null);
   function showDiv() {
@@ -164,10 +164,14 @@ function ButtonsOptions({trans}) {
       <div ref={refDiv} className="hidden">
         <div className="p-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-900 border-b-0">
           <p className="mb-2 text-gray-600 ">
-          <a href="https://www.kamill.pe/" target='_blank' rel="noreferrer"><a className="underline">{trans?.view_shop}</a></a>
+            <a href="https://www.kamill.pe/" target="_blank" rel="noreferrer">
+              <a className="underline">{trans?.view_shop}</a>
+            </a>
           </p>
           <p className="text-gray-600 ">
-          <Link href="/salones"><a className="underline	">{trans?.view_salon}</a></Link>
+            <Link href="/salones">
+              <a className="underline	">{trans?.view_salon}</a>
+            </Link>
           </p>
         </div>
       </div>

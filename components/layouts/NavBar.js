@@ -63,33 +63,21 @@ export default function NavBar() {
                           {txtTranslate?.world}
                         </button>
                       </a>
-                      <Link href="/salones">
+                      <Link href="/salones" passHref>
                         <button className="btn-intranet text-white">
                           {txtTranslate?.salon}
                         </button>
                       </Link>
                     </li>
                     <li>
-                      <Link href={asPath} locale={"es-ES"}>
-                        <img
-                          src="/images/flags/p.svg"
-                          width={30}
-                          height={30}
-                          alt="Español"
-                          className="img-ad cursor-pointer"
-                        ></img>
+                      <Link href={asPath} locale={"es-ES"} passHref>
+                        ES
                       </Link>
                     </li>
 
                     <li>
-                      <Link href={asPath} locale={"en-US"}>
-                        <img
-                          src="/images/flags/usa.svg"
-                          width={30}
-                          height={30}
-                          alt="Ingles"
-                          className="img-ad  cursor-pointer"
-                        ></img>
+                      <Link href={asPath} locale={"en-US"} passHref>
+                        EN
                       </Link>
                     </li>
                   </ul>
@@ -103,14 +91,12 @@ export default function NavBar() {
             <div className="row align-items-center">
               <div className="col-lg-2">
                 <div className="logo">
-                  <Link href="/">
-                    <a>
-                      <img
-                        src="/images/radiant.png"
-                        alt=""
-                        className="align-self-center"
-                      />
-                    </a>
+                  <Link href="/" passHref>
+                    <img
+                      src="/images/radiant.png"
+                      alt=""
+                      className="align-self-center"
+                    />
                   </Link>
                 </div>
               </div>

@@ -14,7 +14,7 @@ function Detail({ product, query, locale }) {
 }
 
 export async function getServerSideProps({ query, locale }) {
-  const product = await getProductsDetail(query.line, query.product, locale);
+  const product = await getProductsDetail(query?.line, query?.product, locale);
   if (product?.rows > 0) {
     return { props: { product, query, locale } };
   }
