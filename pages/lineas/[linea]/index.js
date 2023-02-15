@@ -93,11 +93,11 @@ function Index() {
       <Swiper>
         {linea?.files.map((image, ind) => (
           <SwiperSlide key={ind}>
-            <div className={styles.contenedor}>
+            <div key={ind} className={styles.contenedor}>
               <Image
                 src={image.url}
-                layout="fill"
-                objectFit="contain"
+                height={569}
+                width={1445}
                 alt="..."
               ></Image>
             </div>
