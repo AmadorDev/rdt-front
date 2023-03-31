@@ -7,19 +7,16 @@ import HoverCate from "../categorie/HoverCate";
 export default function MenuItem({ item, className = "" }) {
   const { asPath, pathname } = useRouter();
 
-
   return (
     <>
       {item.code !== "cate" ? (
         <li className={className + " " + ""}>
-          <Link href={item.link}>
-            <a
-              className={asPath === item.link ? "active" : null}
-              target={item.ex ? "_blank" : null}
-            >
-              {" "}
-              {item.name}
-            </a>
+          <Link
+            href={item.link}
+            className={asPath === item.link ? "active" : null}
+            target={item.ex ? "_blank" : null}
+          >
+            {item.name}
           </Link>
         </li>
       ) : (
@@ -42,7 +39,7 @@ function LineasMd({ item }) {
 
       <div className="mega_menu">
         <ul className="mega_menu_inner">
-         <HoverCate></HoverCate>
+          <HoverCate></HoverCate>
           {/* {item.cate?.map((cates, index) => (
             <li key={index}>
               <a className="item-cate">{cates.name}</a>
@@ -83,7 +80,7 @@ function Mobil({ item }) {
             }
           />
         </span>
-        <a onClick={showMenu}>{item.name}</a>
+        <button onClick={showMenu}>{item.name}</button>
         <ul className="sub-menu" style={{ display: displayMenu }}>
           {item.cate?.map((v, k) => (
             <li className="menu-item-has-children " key={k}>
@@ -115,15 +112,13 @@ function SubMenu({ item }) {
           }
         />
       </span>
-      <a onClick={showItem}>
+      <button onClick={showItem}>
         {item.name} ({item.lineas?.length})
-      </a>
+      </button>
       <ul className="sub-menu" style={{ display: displayItem }}>
         {item.lineas?.map((ln, idx) => (
           <li key={idx}>
-            <Link href={`/lineas/${ln.slug}`}>
-              <a>{ln.name}</a>
-            </Link>
+            <Link href={`/lineas/${ln.slug}`}>{ln.name}</Link>
           </li>
         ))}
       </ul>

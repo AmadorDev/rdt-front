@@ -11,6 +11,7 @@ export default function ImageDetail({ url }) {
             height={350}
             //  layout="responsive"
             className={`imaged`}
+            alt="imagen"
           ></Image>
         ) : null}
       </div>

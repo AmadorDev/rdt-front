@@ -37,6 +37,12 @@ function Salones({ data, translation }) {
           </div>
         </div>
 
+        {/* <iframe
+          src="https://www.google.com/maps/d/u/0/embed?mid=1vEY6t9LdBMgqEbNTz6zMTOwMPvheRaE&ehbc=2E312F"
+          width="1920"
+          height="1080"
+  ></iframe>*/}
+
         <DividerDos></DividerDos>
       </div>
     </Container>

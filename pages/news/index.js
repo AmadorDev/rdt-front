@@ -44,6 +44,8 @@ export default function Index() {
   const getEvent = async () => {
     try {
       const resp = await getEvents(locale);
+      console.log(resp);
+
       if (resp?.rows > 0) {
         setEvents(resp.data);
         if (query?.sev) {

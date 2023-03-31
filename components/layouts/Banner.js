@@ -1,35 +1,35 @@
 import { SwiperSlide } from "swiper/react";
 import Carrusel from "../utils/Carrusel";
 import Image from "next/image";
-import React, { useState, useEffect , useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import { getBanner } from "../../api/newApi";
+import Link from "next/link";
 
 import menuContext from "../../contexts/menu/menuContext";
+
 export default function Banner() {
-const {banner,setBanner} = useContext(menuContext)
+  const { banner, setBanner } = useContext(menuContext);
 
   const [images, setImages] = useState(banner);
   const { locale } = useRouter();
 
   const getImages = async () => {
     try {
-    
       const resp = await getBanner(locale);
-      console.log(resp)
+      console.log(resp);
       if (resp?.rows > 0) {
         setImages(resp?.data);
-        setBanner(resp?.data)
+        setBanner(resp?.data);
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
   useEffect(() => {
-    if(banner.length === 0){
+    if (banner.length === 0) {
       getImages();
     }
-    
   }, []);
 
   return (
@@ -51,5 +51,4 @@ const {banner,setBanner} = useContext(menuContext)
       </Carrusel>
     </div>
   );
-};
-
+}

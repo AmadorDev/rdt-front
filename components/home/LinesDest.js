@@ -103,12 +103,12 @@ function ItemFeatured({ item, text }) {
           </Link>
         </div>
       </div>
-      <div className="item md:w-1/3  flex justify-end ">
+      <div className="relative item md:w-1/3  flex justify-end ">
         {item?.image ? (
           <Image
             src={item?.image}
             className="flex self-end ld_img "
-            objectFit="fill"
+            objectFit="contain"
             width={381}
             height={418}
             alt={item?.name}

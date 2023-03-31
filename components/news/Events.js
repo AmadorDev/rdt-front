@@ -16,6 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
 import styles from "./swiper.module.css";
+import Link from "next/link";
 //final de prueba import
 function Events({ data }) {
   const { locale } = useRouter();
@@ -51,30 +52,27 @@ function Events({ data }) {
       <Swiper
         className={styles.swiper}
         modules={[Navigation, Pagination]}
-        slidesPerView={3}
-        spaceBetween={50}
+        spaceBetween={100}
         navigation
-        pagination={{ clickable: true }}
+        loop
       >
         {data?.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="relative">
-              <Image
-                src={item?.image}
-                width={512}
-                height={849}
-                className="cursor-pointer"
-                alt={item?.title}
-                onClick={() => router.push(`/events/${item.slug}`)}
-              ></Image>
-              <p>{item?.title}</p>
-              <Button
-                className="px-5"
-                onClick={() => router.push(`/events/${item.slug}`)}
-              >
-                {info?.more}
-              </Button>
-            </div>
+            <Link href={`/events/${item.slug}`} passHref>
+              <div>
+                <div className="relative h-96 w-96">
+                  <Image
+                    src={item?.images[0]?.url}
+                    className="cursor-pointer"
+                    alt={item?.title}
+                    objectFit="cover"
+                    layout="fill"
+                  />
+                </div>
+                <p>{item?.title}</p>
+                <Button className="px-5">{info?.more}</Button>
+              </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
