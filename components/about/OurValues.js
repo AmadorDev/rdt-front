@@ -2,6 +2,7 @@ import React from "react";
 import DividerDos from "../utils/DividerDos";
 import TitleAndSubtitle from "../utils/TitleAndSubtitle";
 import translations from "../../staticTranslations.json";
+import Image from "next/image";
 import { useRouter } from "next/router";
 export default function OurValues() {
   const { locale } = useRouter();
@@ -57,14 +58,19 @@ export default function OurValues() {
 function CardValues({ title, description, imagen = "model_azul", order = 0 }) {
   return (
     <div className="row align-items-center justify-content-between  card-values my-2">
-      <div className={`col-5  p-0 order-${order}`}>
-        <img src={`/images/${imagen}.png`} className="img-values-dime"></img>
+      <div className={`col-5 h-80 p-0 order-${order}`}>
+        <Image
+          src={`/images/${imagen}.png`}
+          layout="fill"
+          objectFit="cover"
+          height={"100%"}
+          width={"100%"}
+          alt={title}
+        ></Image>
       </div>
       <div className={`col-7  p-0 `}>
-        
-            <p className="mx-3 about_v_title">{title}</p>
-            <p className="mx-3">{description}</p>
-        
+        <p className="mx-3 about_v_title">{title}</p>
+        <p className="mx-3">{description}</p>
       </div>
     </div>
   );

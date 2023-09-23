@@ -20,15 +20,13 @@ import "../public/assets/css/plugins.css";
 import "../public/assets/css/style.css";
 import CapilarState from "../contexts/capilar/capilarState";
 import Loading from "../components/utils/Loading";
-import LoadingScreen from "../components/LoadingScreen";
 
 import { useContext, useEffect, useState } from "react";
 
 import MenuState from "../contexts/menu/menuState";
 import menuContext from "../contexts/menu/menuContext";
 import { useRouter } from "next/router";
-import { Toaster } from 'react-hot-toast';
-// import '~@/swiper/swiper-bundle.css';
+import { Toaster } from "react-hot-toast";
 
 import "nprogress/nprogress.css";
 import dynamic from "next/dynamic";
@@ -37,7 +35,7 @@ const TopProgressBar = dynamic(
   () => {
     return import("../components/TopProgressBar");
   },
-  { ssr: false },
+  { ssr: false }
 );
 
 function MyApp({ Component, pageProps }) {

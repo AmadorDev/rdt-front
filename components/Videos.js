@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import CarruselGroup from "./utils/CarruselGroup";
 import FullScreenVideo from "./utils/FullScreenVideo";
 import ModalAnimate from "./utils/ModalAnimate";
@@ -8,7 +8,7 @@ import VideoItemHome from "./utils/VideoItemHome";
 
 function Videos() {
   const [showModal, setShowModal] = useState(false);
-  const [urlSelected, setUrlSelected] = useState(null)
+  const [urlSelected, setUrlSelected] = useState(null);
   const images = [
     { url: "/realeas_videos/baby_blody.jpg", url_video: "9Cq2-GB3hbw" },
     { url: "/realeas_videos/dream_chocolate.jpg", url_video: "jQFORSrZ1RM" },
@@ -18,45 +18,47 @@ function Videos() {
 
   const showDetail = async (url) => {
     setShowModal(true);
-    setUrlSelected(url)
+    setUrlSelected(url);
     console.log(url);
   };
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="d-none d-md-block">
-          <CarruselGroup duration={5000} numberGroup={4}>
-            {images?.map((image, index) => (
-              <SwiperSlide key={index}>
-                <Image
-                  src={image.url}
-                  width={230}
-                  height={385}
-                  onClick={() => showDetail(image.url_video)}
-                  className="cursor-pointer"
-                ></Image>
-              </SwiperSlide>
-            ))}
-          </CarruselGroup>
-        </div>
+    <>
+      {/*<div className="container">
+        <div className="row">
+          <div className="d-none d-md-block">
+            <CarruselGroup duration={5000} numberGroup={4}>
+              {images?.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image.url}
+                    width={230}
+                    height={385}
+                    onClick={() => showDetail(image.url_video)}
+                    className="cursor-pointer"
+                    alt={image.name}
+                  ></Image>
+                </SwiperSlide>
+              ))}
+            </CarruselGroup>
+          </div>
 
-        <div className="d-block d-md-none">
-          <CarruselGroup duration={5000} numberGroup={1}>
-            {images?.map((image, index) => (
-              <SwiperSlide key={index}>
-                <Image
-                  src={image.url}
-                  width={512}
-                  height={849}
-                  onClick={() => showDetail(image.url_video)}
-                  className="cursor-pointer"
-                ></Image>
-              </SwiperSlide>
-            ))}
-          </CarruselGroup>
-        </div>
-      </div>
+          <div className="d-block d-md-none">
+            <CarruselGroup duration={5000} numberGroup={1}>
+              {images?.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image.url}
+                    width={512}
+                    height={849}
+                    onClick={() => showDetail(image.url_video)}
+                    className="cursor-pointer"
+                  ></Image>
+                </SwiperSlide>
+              ))}
+            </CarruselGroup>
+          </div>
+        </div>*/}
 
       {showModal ? (
         <ModalAnimate
@@ -73,7 +75,36 @@ function Videos() {
           </div>
         </ModalAnimate>
       ) : null}
-    </div>
+
+      <div className="container">
+        <div className="row">
+          <Swiper
+            slidesPerView={1}
+            breakpoints={{
+              1024: {
+                slidesPerView: 4,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {images?.map((image, index) => (
+              <SwiperSlide key={index}>
+                <Image
+                  src={image.url}
+                  width={230}
+                  height={385}
+                  onClick={() => showDetail(image.url_video)}
+                  className="cursor-pointer"
+                  alt={image.name}
+                ></Image>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </>
   );
 }
 

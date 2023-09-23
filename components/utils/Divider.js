@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function Divider() {
-  return (
-    <div className="divider"></div>
-  )
+  return <div className="h-10"></div>;
 }

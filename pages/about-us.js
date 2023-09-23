@@ -21,10 +21,10 @@ export default function index() {
       </div>
 
       <div className="container">
-        <Divider className=""></Divider>
-        <AboutUs></AboutUs>
-        <Divider></Divider>
-        <OurValues></OurValues>
+        <Divider />
+        <AboutUs />
+        <Divider />
+        <OurValues />
         {/* <Divider></Divider>
         <MissionAndVision /> */}
       </div>

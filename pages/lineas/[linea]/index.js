@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import getDetailLinea, { getProductsByLinea } from "../../../api/lineaApi";
-import Banner from "../../../components/layouts/Banner";
 import Breakcrums from "../../../components/layouts/Breakcrums";
 import Container from "../../../components/layouts/Container";
 import ItemBreack from "../../../components/layouts/ItemBreack";
@@ -11,19 +10,19 @@ import { CardProduct } from "../../../components/lines/CardProduct";
 import ListEvent from "../../../components/lines/events/ListEvent";
 import ListVideo from "../../../components/lines/video/ListVideo";
 
-import ItemProd from "../../../components/List/ItemProd";
-import CarruselSolo from "../../../components/utils/CarruselOne";
 import Divider from "../../../components/utils/Divider";
 import DividerDos from "../../../components/utils/DividerDos";
-import ModalTa from "../../../components/utils/ModalTa";
 import TitleAndSubtitle from "../../../components/utils/TitleAndSubtitle";
 import Button from "../../../components/widtgets/Button";
 import menuContext from "../../../contexts/menu/menuContext";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Loading from "../../../components/utils/Loading";
 
-export default function Index() {
+import styles from "./lineas.module.css";
+
+function Index() {
   const { line_st } = useContext(menuContext);
-  const [redirect, setSedirect] = useState(0);
+  const [redirect, setRedirect] = useState(0);
   const [linea, setLinea] = useState(null);
   const [products, setProducts] = useState(null);
 
@@ -37,7 +36,6 @@ export default function Index() {
       const res = await getDetailLinea(query?.linea, locale);
 
       if (Object.keys(res?.data).length > 0) {
-        // if (!isMounted) return null;
         setLinea(res);
         getProducts();
       }
@@ -60,6 +58,7 @@ export default function Index() {
       setProducts(null);
     }
   }
+
   function slugName() {
     let q = query.linea.replace(/-/g, " ");
     return q.toLowerCase();
@@ -73,9 +72,13 @@ export default function Index() {
     }
 
     return () => {
-      isMounted.current = true;
+      isMounted.current = false;
     };
-  }, [query?.linea, locale]);
+  }, [query.linea, locale]);
+
+  if (!linea || !products) {
+    return <Loading />;
+  }
 
   return (
     <Container>
@@ -90,15 +93,13 @@ export default function Index() {
       <Swiper>
         {linea?.files.map((image, ind) => (
           <SwiperSlide key={ind}>
-            <div className="flex mx-auto justify-center">
-              <div className="" style={{ width: "100%" }}>
-                <Image
-                  src={image.url}
-                  width={910}
-                  height={418}
-                  alt="..."
-                ></Image>
-              </div>
+            <div key={ind} className={styles.contenedor}>
+              <Image
+                src={image.url}
+                height={569}
+                width={1445}
+                alt="..."
+              ></Image>
             </div>
           </SwiperSlide>
         ))}
@@ -145,7 +146,7 @@ export default function Index() {
           title={`${line_st?.prod_title}`}
           // description={`${line_st?.prod_desc}`}
         ></TitleAndSubtitle>
-        <DividerDos></DividerDos>
+        <Divider />
 
         <div className="row justify-content-center">
           {products?.data.map((item, index) => (
@@ -178,3 +179,5 @@ export default function Index() {
     </Container>
   );
 }
+
+export default Index;

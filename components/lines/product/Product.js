@@ -13,8 +13,8 @@ import ItemBreack from "../../layouts/ItemBreack";
 import DetailSanite from "../../utils/DetailSanite";
 import Divider from "../../utils/Divider";
 
+import styles from "./imagen.module.css";
 import DetailImageProduct from "./DetailImageProduct";
-
 
 export default function Product({ product, query, locale }) {
   const { line_st } = useContext(menuContext);
@@ -81,10 +81,10 @@ export default function Product({ product, query, locale }) {
         ></ItemBreack>
         <ItemBreack title={product?.data.name}></ItemBreack>
       </Breakcrums>
-      <div className="container">
-        <Divider></Divider>
+      <div className={styles.container}>
+        {/*<Divider></Divider>*/}
         <DetailImageProduct images={product?.images} />
-        <Divider></Divider>
+        {/*<Divider></Divider>*/}
         <DetailSanite
           title={product?.data.name}
           content={product?.data.description}

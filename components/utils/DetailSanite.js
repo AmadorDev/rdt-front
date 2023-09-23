@@ -1,7 +1,6 @@
 import { sanitize } from "dompurify";
 
-
-export default function DetailSanite({title,content}) {
+export default function DetailSanite({ title, content }) {
   return (
     <div className="row justify-content-center">
       <div className="col-12 text-center">
@@ -9,13 +8,7 @@ export default function DetailSanite({title,content}) {
       </div>
       <div className="col-10 text-left mt-3">
         {/* text-left */}
-        <div
-          className="details_desc spaces-text "
-          dangerouslySetInnerHTML={{
-            __html: sanitize(content),
-          }}
-        ></div>
-        
+        <div className="details_desc spaces-text ">{content}</div>
       </div>
     </div>
   );

@@ -1,7 +1,12 @@
 .swiper {
   width: 100%;
-  min-height: 650px;
   position: relative;
   overflow: hidden;
   z-index: 1;
+}
+.container {
+  display: flex;
+}
+.relative {
+  position: relative;
 }

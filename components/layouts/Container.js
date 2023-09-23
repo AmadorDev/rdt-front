@@ -10,26 +10,24 @@ import { SwiperSlide } from "swiper/react";
 import HeadGlobal from "./HeadGlobal";
 import DividerDos from "../utils/DividerDos";
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 import ButtonWsp from "../ButtonWsp";
+import Divider from "../utils/Divider";
 
-export default function Container({ footer= true,children }) {
+export default function Container({ footer = true, children }) {
   return (
     <>
       <ScriptsEx></ScriptsEx>
       <NavHeader></NavHeader>
       <NavBar></NavBar>
-      
+
       {children}
       {/* <ButtonWsp></ButtonWsp> */}
-      
-      <DividerDos></DividerDos>
+
+      <Divider />
       <RegisterNow></RegisterNow>
-     
-      {footer? <Footer/>:null}
-      
+
+      {footer ? <Footer /> : null}
     </>
   );
 }
-
-
